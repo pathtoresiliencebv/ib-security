@@ -390,7 +390,7 @@ export default function Index() {
               <Flame className="mr-2 h-5 w-5" />
               WAAROM IB SECURITY DE BESTE KEUZE IS
             </Badge>
-            <h2 className="font-display text-5xl md:text-8xl font-black text-gray-900 mb-8 text-shadow-lg">
+            <h2 className="font-display text-3xl md:text-5xl font-black text-gray-900 mb-8 text-shadow-lg">
               UW VERTROUWDE
               <span className="block bg-gradient-to-r from-blue-600 via-purple-600 to-blue-800 bg-clip-text text-transparent">
                 BEVEILIGINGSPARTNER
@@ -461,11 +461,11 @@ export default function Index() {
               <TrendingUp className="mr-3 h-6 w-6" />
               BEWEZEN RESULTATEN
             </Badge>
-            <h2 className="font-display text-6xl md:text-9xl font-black mb-8 text-shadow-xl">
+            <h2 className="font-display text-4xl md:text-6xl font-black mb-8 text-shadow-xl">
               <span className="bg-gradient-to-r from-white via-blue-200 to-white bg-clip-text text-transparent">
                 EXCELLENTIE
               </span>
-              <span className="block text-4xl md:text-6xl mt-4 text-blue-300 font-heavy">
+              <span className="block text-3xl md:text-4xl mt-4 text-blue-300 font-heavy">
                 IN CIJFERS
               </span>
             </h2>
@@ -527,11 +527,14 @@ export default function Index() {
             <Button
               asChild
               size="lg"
-              className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black hover:from-yellow-300 hover:to-orange-400 shadow-2xl hover:shadow-glow-intense transition-all duration-300 transform hover:scale-110 text-xl px-12 py-6 font-black"
+              className="relative bg-gradient-to-r from-blue-600 via-purple-600 to-blue-800 hover:from-blue-700 hover:via-purple-700 hover:to-blue-900 text-white shadow-2xl hover:shadow-glow-intense transition-all duration-300 transform hover:scale-105 text-xl px-12 py-6 font-black overflow-hidden group"
             >
               <Link to="/offerte-opvragen">
-                <Target className="mr-3 h-6 w-6" />
-                WORD OOK EEN TEVREDEN KLANT
+                <div className="absolute inset-0 bg-gradient-to-r from-purple-600 via-blue-600 to-purple-800 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="relative z-10 flex items-center">
+                  <Target className="mr-3 h-6 w-6" />
+                  WORD OOK EEN TEVREDEN KLANT
+                </div>
               </Link>
             </Button>
           </div>
