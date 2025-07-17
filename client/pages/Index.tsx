@@ -90,26 +90,127 @@ const features = [
     icon: Clock,
     title: "24/7 Beschikbaarheid",
     description: "Wij zijn altijd voor u bereikbaar, dag en nacht.",
+    color: "bg-blue-100 text-blue-600",
   },
   {
     icon: Award,
     title: "Gecertificeerd Personeel",
     description:
       "Al onze beveiligingsmedewerkers zijn volledig gecertificeerd en getraind.",
+    color: "bg-green-100 text-green-600",
   },
   {
     icon: Shield,
     title: "Betrouwbare Service",
     description:
       "Jarenlange ervaring in de beveiligingsbranche met uitstekende reputatie.",
+    color: "bg-purple-100 text-purple-600",
   },
   {
     icon: Users,
     title: "Persoonlijke Aanpak",
     description:
       "Elk beveiligingsplan wordt op maat gemaakt voor uw specifieke situatie.",
+    color: "bg-orange-100 text-orange-600",
   },
 ];
+
+const statistics = [
+  {
+    number: "500+",
+    label: "Tevreden Klanten",
+    icon: Users,
+    description: "Bedrijven vertrouwen op onze beveiliging",
+  },
+  {
+    number: "15+",
+    label: "Jaar Ervaring",
+    icon: Award,
+    description: "Bewezen expertise in de beveiligingsbranche",
+  },
+  {
+    number: "24/7",
+    label: "Service",
+    icon: Clock,
+    description: "Altijd bereikbaar voor noodgevallen",
+  },
+  {
+    number: "99.8%",
+    label: "Betrouwbaarheid",
+    icon: Target,
+    description: "Bijna perfecte bescherming record",
+  },
+];
+
+const testimonials = [
+  {
+    name: "Jan Vermeulen",
+    company: "Vermeulen Transport B.V.",
+    text: "IB Security heeft ons transport bedrijf uitstekend geholpen met objectbeveiliging. Hun professionele aanpak en betrouwbaarheid zijn ongeëvenaard.",
+    rating: 5,
+  },
+  {
+    name: "Maria de Vries",
+    company: "Zorgcentrum De Horizon",
+    text: "Voor onze zorginstelling hebben we een partner gevonden die begrijpt wat er nodig is. Empathisch en vakkundig personeel.",
+    rating: 5,
+  },
+  {
+    name: "Peter Jansen",
+    company: "Evenementen Organisatie Plus",
+    text: "Al onze grote evenementen worden perfect beveiligd door IB Security. Geen stress meer over de veiligheid van onze gasten.",
+    rating: 5,
+  },
+];
+
+const companyValues = [
+  {
+    icon: Shield,
+    title: "Veiligheid Voorop",
+    description:
+      "Uw veiligheid en die van uw bezittingen staat altijd op de eerste plaats in alles wat wij doen.",
+  },
+  {
+    icon: Lock,
+    title: "Discretie & Vertrouwelijkheid",
+    description:
+      "Wij werken met volledige discretie en respecteren de privacy van onze klanten ten alle tijde.",
+  },
+  {
+    icon: TrendingUp,
+    title: "Continue Verbetering",
+    description:
+      "Wij investeren voortdurend in training en nieuwe technologieën om de beste service te bieden.",
+  },
+];
+
+// Counter hook for animated numbers
+function useCounter(end: number, duration: number = 2000) {
+  const [count, setCount] = useState(0);
+  const [hasAnimated, setHasAnimated] = useState(false);
+
+  useEffect(() => {
+    if (!hasAnimated) return;
+
+    let start = 0;
+    const increment = end / (duration / 16);
+    const timer = setInterval(() => {
+      start += increment;
+      if (start >= end) {
+        setCount(end);
+        clearInterval(timer);
+      } else {
+        setCount(Math.floor(start));
+      }
+    }, 16);
+
+    return () => clearInterval(timer);
+  }, [end, duration, hasAnimated]);
+
+  const startAnimation = () => setHasAnimated(true);
+
+  return { count, startAnimation };
+}
 
 export default function Index() {
   return (
