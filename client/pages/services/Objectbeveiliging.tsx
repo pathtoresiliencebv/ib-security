@@ -100,7 +100,6 @@ const objectTypes = [
 const packages = [
   {
     name: "Basis Objectbeveiliging",
-    price: "€25/uur",
     features: [
       "1 beveiligingsmedewerker",
       "Dagdienst (08:00-18:00)",
@@ -112,7 +111,6 @@ const packages = [
   },
   {
     name: "Premium 24/7 Beveiliging",
-    price: "€30/uur",
     features: [
       "24/7 bewaking",
       "Meerdere beveiligingsmedewerkers",
@@ -125,7 +123,6 @@ const packages = [
   },
   {
     name: "Enterprise Beveiliging",
-    price: "Op maat",
     features: [
       "Volledig beveiligingsteam",
       "Dedicated security manager",
