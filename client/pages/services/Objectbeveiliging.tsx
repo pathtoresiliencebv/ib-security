@@ -200,7 +200,24 @@ export default function Objectbeveiliging() {
             </div>
 
             <div className="animate-on-scroll-right">
-              <Card className="bg-white/10 backdrop-blur-lg border-white/20 text-white shadow-2xl">
+              <div className="relative group">
+                <div className="absolute -inset-4 bg-gradient-to-r from-blue-600 via-purple-600 to-blue-800 rounded-3xl blur opacity-30 group-hover:opacity-50 transition duration-500"></div>
+                <div className="relative bg-white rounded-3xl p-2 shadow-4xl">
+                  <img
+                    src="https://cdn.builder.io/api/v1/image/assets%2F18e64066d3874f39ae16c8e50727ae4d%2F47505c58700145a59c9d563899e2f6a4?format=webp&width=800"
+                    alt="IB Security beveiliger bij toegangscontrole en auto inspectie"
+                    className="w-full h-[400px] object-cover rounded-2xl shadow-2xl"
+                  />
+                </div>
+                <div className="absolute -bottom-6 -right-6 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-2xl font-bold text-lg shadow-2xl animate-bounce-subtle">
+                  <div className="flex items-center space-x-2">
+                    <Shield className="w-5 h-5" />
+                    <span>OBJECTBEVEILIGING</span>
+                  </div>
+                </div>
+              </div>
+
+              <Card className="bg-white/10 backdrop-blur-lg border-white/20 text-white shadow-2xl mt-8">
                 <CardContent className="p-8">
                   <h3 className="text-2xl font-bold mb-6">
                     Waarom Objectbeveiliging?
