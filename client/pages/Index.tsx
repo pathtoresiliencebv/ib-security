@@ -307,32 +307,85 @@ export default function Index() {
         </div>
       </section>
 
-      {/* Features Section */}
-      <section className="py-16 bg-gray-50">
+      {/* Enhanced Features Section */}
+      <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Waarom kiezen voor IB Security?
+            <Badge variant="outline" className="mb-4">
+              Waarom IB Security
+            </Badge>
+            <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
+              Uw vertrouwde
+              <span className="text-blue-600"> beveiligingspartner</span>
             </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Wij onderscheiden ons door kwaliteit, betrouwbaarheid en een
-              persoonlijke aanpak.
+              persoonlijke aanpak die past bij uw specifieke behoeften.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
-              <Card key={index} className="text-center">
-                <CardContent className="pt-6">
-                  <div className="mx-auto w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
-                    <feature.icon className="w-6 h-6 text-blue-600" />
+              <Card
+                key={index}
+                className="text-center group hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border-0 shadow-lg"
+              >
+                <CardContent className="pt-8 pb-6">
+                  <div
+                    className={`mx-auto w-16 h-16 ${feature.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}
+                  >
+                    <feature.icon className="w-8 h-8" />
                   </div>
-                  <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">
                     {feature.title}
                   </h3>
-                  <p className="text-gray-600">{feature.description}</p>
+                  <p className="text-gray-600 leading-relaxed">
+                    {feature.description}
+                  </p>
                 </CardContent>
               </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Statistics Section */}
+      <section className="py-20 bg-blue-600 text-white relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-blue-700"></div>
+        <div className="absolute inset-0 opacity-10">
+          <div
+            className={
+              'absolute top-0 left-0 w-full h-full bg-[url(\'data:image/svg+xml,%3Csvg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="white" fill-opacity="0.1"%3E%3Cpath d="m0 40 40-40V0H0v40Z"/%3E%3C/g%3E%3C/svg%3E\')]'
+            }
+          ></div>
+        </div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              Bewezen resultaten in cijfers
+            </h2>
+            <p className="text-xl text-blue-100">
+              Deze cijfers spreken voor zich en tonen ons commitment aan
+              excellentie
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {statistics.map((stat, index) => (
+              <div key={index} className="text-center group">
+                <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 group-hover:bg-white/20 transition-all duration-300">
+                  <div className="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                    <stat.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <div className="text-4xl md:text-5xl font-bold mb-3 text-white">
+                    {stat.number}
+                  </div>
+                  <div className="text-xl font-semibold mb-2 text-blue-100">
+                    {stat.label}
+                  </div>
+                  <p className="text-blue-200 text-sm">{stat.description}</p>
+                </div>
+              </div>
             ))}
           </div>
         </div>
