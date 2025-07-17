@@ -34,8 +34,8 @@ const contactMethods = [
     icon: Phone,
     title: "Telefoon",
     description: "24/7 bereikbaar voor noodgevallen",
-    value: "+31 (0)88 123 4567",
-    action: "tel:+31881234567",
+    value: "085 401 31 92",
+    action: "tel:0854013192",
     color: "from-green-500 to-green-600",
     urgency: "Direct contact",
   },
@@ -52,8 +52,8 @@ const contactMethods = [
     icon: MessageCircle,
     title: "WhatsApp Business",
     description: "Snelle communicatie via chat",
-    value: "+31 6 12 34 56 78",
-    action: "https://wa.me/31612345678",
+    value: "085 401 31 92",
+    action: "https://wa.me/31854013192",
     color: "from-green-400 to-green-500",
     urgency: "Binnen enkele uren",
   },
@@ -442,10 +442,10 @@ export default function Contact() {
                     Voor acute beveiligingssituaties
                   </p>
                   <a
-                    href="tel:+31612345678"
+                    href="tel:0854013192"
                     className="text-3xl font-black text-red-600 hover:text-red-700 transition-colors"
                   >
-                    +31 6 12 34 56 78
+                    085 401 31 92
                   </a>
                 </CardContent>
               </Card>
