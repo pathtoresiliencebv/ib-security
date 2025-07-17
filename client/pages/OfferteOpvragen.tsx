@@ -322,12 +322,11 @@ export default function OfferteOpvragen() {
                     {serviceOptions.map((service) => (
                       <Card
                         key={service.id}
-                        className={`cursor-pointer transition-all duration-300 border-2 ${
+                        className={`transition-all duration-300 border-2 ${
                           formData.services.includes(service.id)
                             ? "border-blue-500 bg-blue-50 shadow-lg"
                             : "border-gray-200 hover:border-blue-300 hover:shadow-md"
                         }`}
-                        onClick={() => handleServiceToggle(service.id)}
                       >
                         <CardContent className="p-6">
                           <div className="flex items-start space-x-4">
