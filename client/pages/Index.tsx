@@ -586,83 +586,163 @@ export default function Index() {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="bg-blue-600 text-white py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Klaar om uw beveiliging te verbeteren?
-          </h2>
-          <p className="text-xl mb-8 max-w-2xl mx-auto">
-            Neem vandaag nog contact met ons op voor een vrijblijvende offerte
-            en ontdek hoe IB Security u kan helpen.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button
-              asChild
-              size="lg"
-              className="bg-white text-blue-600 hover:bg-blue-50"
-            >
-              <Link to="/offerte-opvragen">Offerte Opvragen</Link>
-            </Button>
-            <Button
-              asChild
-              variant="outline"
-              size="lg"
-              className="border-white text-white hover:bg-white hover:text-blue-600"
-            >
-              <a href="tel:+31881234567">
-                <Phone className="mr-2 h-4 w-4" />
-                088 123 4567
-              </a>
-            </Button>
+      {/* Enhanced CTA Section */}
+      <section className="relative bg-gradient-to-r from-blue-600 via-blue-700 to-blue-800 text-white py-20 overflow-hidden">
+        <div className="absolute inset-0 bg-black/10"></div>
+        <div className="absolute inset-0">
+          <div className="absolute top-10 left-10 w-32 h-32 bg-white/5 rounded-full blur-xl"></div>
+          <div className="absolute bottom-10 right-10 w-40 h-40 bg-white/5 rounded-full blur-xl"></div>
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-60 h-60 bg-white/3 rounded-full blur-2xl"></div>
+        </div>
+
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="max-w-4xl mx-auto">
+            <div className="mb-6">
+              <AlertTriangle className="w-16 h-16 text-yellow-400 mx-auto mb-4 animate-pulse" />
+            </div>
+            <h2 className="text-4xl md:text-6xl font-bold mb-6">
+              Klaar om uw beveiliging
+              <span className="block text-blue-200">te verbeteren?</span>
+            </h2>
+            <p className="text-xl md:text-2xl mb-8 text-blue-100 leading-relaxed">
+              Neem vandaag nog contact met ons op voor een vrijblijvende offerte
+              en ontdek hoe IB Security uw veiligheid naar een hoger niveau kan
+              tillen.
+            </p>
+
+            <div className="flex flex-col sm:flex-row gap-6 justify-center mb-8">
+              <Button
+                asChild
+                size="lg"
+                className="bg-white text-blue-600 hover:bg-blue-50 shadow-2xl hover:shadow-3xl transition-all transform hover:scale-105 text-lg px-8 py-4"
+              >
+                <Link to="/offerte-opvragen">
+                  <Shield className="mr-2 h-5 w-5" />
+                  Gratis Offerte Opvragen
+                </Link>
+              </Button>
+              <Button
+                asChild
+                variant="outline"
+                size="lg"
+                className="border-2 border-white text-white hover:bg-white hover:text-blue-600 backdrop-blur-sm bg-white/10 text-lg px-8 py-4"
+              >
+                <a href="tel:+31881234567">
+                  <Phone className="mr-2 h-5 w-5" />
+                  Direct bellen: 088 123 4567
+                </a>
+              </Button>
+            </div>
+
+            <div className="text-blue-200 text-sm">
+              ⏰ Binnen 24 uur reactie gegarandeerd
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Contact Info Section */}
-      <section className="py-16 bg-gray-50">
+      {/* Enhanced Contact Info Section */}
+      <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              Meerdere manieren om
+              <span className="text-blue-600"> contact op te nemen</span>
+            </h2>
+            <p className="text-xl text-gray-600">
+              Kies de manier die het beste bij u past
+            </p>
+          </div>
+
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            <Card className="text-center">
-              <CardContent className="pt-6">
-                <Phone className="mx-auto w-8 h-8 text-blue-600 mb-4" />
-                <h3 className="text-lg font-semibold mb-2">Bel Direct</h3>
-                <p className="text-gray-600 mb-2">
-                  24/7 bereikbaar voor noodgevallen
+            {/* Phone Contact */}
+            <Card className="text-center group hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border-0 shadow-lg">
+              <CardContent className="pt-8 pb-6">
+                <div className="w-16 h-16 bg-gradient-to-br from-green-100 to-green-200 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:from-green-500 group-hover:to-green-600 group-hover:scale-110 transition-all duration-300">
+                  <Phone className="w-8 h-8 text-green-600 group-hover:text-white" />
+                </div>
+                <h3 className="text-2xl font-bold mb-3 group-hover:text-green-600 transition-colors">
+                  Bel Direct
+                </h3>
+                <p className="text-gray-600 mb-4 leading-relaxed">
+                  24/7 bereikbaar voor noodgevallen en directe hulp
                 </p>
                 <a
                   href="tel:+31881234567"
-                  className="text-blue-600 hover:underline font-medium"
+                  className="text-2xl font-bold text-green-600 hover:text-green-700 transition-colors block mb-2"
                 >
                   088 123 4567
                 </a>
+                <div className="text-sm text-gray-500">
+                  Gemiddelde reactietijd: &lt; 5 minuten
+                </div>
               </CardContent>
             </Card>
 
-            <Card className="text-center">
-              <CardContent className="pt-6">
-                <Mail className="mx-auto w-8 h-8 text-blue-600 mb-4" />
-                <h3 className="text-lg font-semibold mb-2">E-mail Contact</h3>
-                <p className="text-gray-600 mb-2">Stuur ons een bericht</p>
+            {/* Email Contact */}
+            <Card className="text-center group hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border-0 shadow-lg">
+              <CardContent className="pt-8 pb-6">
+                <div className="w-16 h-16 bg-gradient-to-br from-blue-100 to-blue-200 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:from-blue-500 group-hover:to-blue-600 group-hover:scale-110 transition-all duration-300">
+                  <Mail className="w-8 h-8 text-blue-600 group-hover:text-white" />
+                </div>
+                <h3 className="text-2xl font-bold mb-3 group-hover:text-blue-600 transition-colors">
+                  E-mail Contact
+                </h3>
+                <p className="text-gray-600 mb-4 leading-relaxed">
+                  Stuur ons een gedetailleerd bericht over uw behoeften
+                </p>
                 <a
                   href="mailto:info@ib-security.nl"
-                  className="text-blue-600 hover:underline font-medium"
+                  className="text-lg font-semibold text-blue-600 hover:text-blue-700 transition-colors block mb-2"
                 >
                   info@ib-security.nl
                 </a>
+                <div className="text-sm text-gray-500">
+                  Reactie binnen 24 uur
+                </div>
               </CardContent>
             </Card>
 
-            <Card className="text-center">
-              <CardContent className="pt-6">
-                <CheckCircle className="mx-auto w-8 h-8 text-blue-600 mb-4" />
-                <h3 className="text-lg font-semibold mb-2">Gratis Offerte</h3>
-                <p className="text-gray-600 mb-4">
-                  Vraag een vrijblijvende offerte aan
+            {/* Quote Request */}
+            <Card className="text-center group hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border-0 shadow-lg">
+              <CardContent className="pt-8 pb-6">
+                <div className="w-16 h-16 bg-gradient-to-br from-purple-100 to-purple-200 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:from-purple-500 group-hover:to-purple-600 group-hover:scale-110 transition-all duration-300">
+                  <CheckCircle className="w-8 h-8 text-purple-600 group-hover:text-white" />
+                </div>
+                <h3 className="text-2xl font-bold mb-3 group-hover:text-purple-600 transition-colors">
+                  Offerte op Maat
+                </h3>
+                <p className="text-gray-600 mb-6 leading-relaxed">
+                  Vraag een vrijblijvende offerte aan die perfect past bij uw
+                  situatie
                 </p>
-                <Button asChild variant="outline">
-                  <Link to="/offerte-opvragen">Offerte Aanvragen</Link>
+                <Button
+                  asChild
+                  className="bg-purple-600 hover:bg-purple-700 text-white shadow-lg hover:shadow-xl transition-all"
+                >
+                  <Link to="/offerte-opvragen">
+                    <Target className="mr-2 h-4 w-4" />
+                    Offerte Aanvragen
+                  </Link>
                 </Button>
+                <div className="text-sm text-gray-500 mt-3">
+                  Geen verplichtingen
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+
+          {/* Location Info */}
+          <div className="mt-16 text-center">
+            <Card className="max-w-2xl mx-auto border-0 shadow-lg">
+              <CardContent className="pt-8 pb-6">
+                <MapPin className="w-12 h-12 text-blue-600 mx-auto mb-4" />
+                <h3 className="text-2xl font-bold mb-3">Landelijk Actief</h3>
+                <p className="text-gray-600 leading-relaxed">
+                  IB Security is actief in heel Nederland. Of u nu in Amsterdam,
+                  Rotterdam, Den Haag, Utrecht of elders bent - wij kunnen u
+                  helpen met al uw beveiligingsbehoeften.
+                </p>
               </CardContent>
             </Card>
           </div>
