@@ -206,11 +206,11 @@ export default function MobieleSurveillance() {
                 <Eye className="mr-2 h-5 w-5" />
                 Flexibele Surveillance
               </Badge>
-              <h1 className="font-display text-5xl md:text-7xl font-black mb-6 text-shadow-xl">
+              <h1 className="font-display text-3xl md:text-5xl font-black mb-6 text-shadow-xl">
                 <span className="bg-gradient-to-r from-white via-green-200 to-white bg-clip-text text-transparent">
                   MOBIELE
                 </span>
-                <span className="block text-green-300 font-heavy text-4xl md:text-5xl mt-2">
+                <span className="block text-green-300 font-heavy text-2xl md:text-4xl mt-2">
                   SURVEILLANCE
                 </span>
               </h1>
@@ -225,11 +225,14 @@ export default function MobieleSurveillance() {
                 <Button
                   asChild
                   size="lg"
-                  className="bg-gradient-to-r from-green-600 to-blue-600 hover:from-green-700 hover:to-blue-700 text-white shadow-xl text-lg px-8 py-4 font-bold transform hover:scale-105 transition-all duration-300"
+                  className="relative bg-gradient-to-r from-green-600 via-blue-600 to-green-800 hover:from-green-700 hover:via-blue-700 hover:to-green-900 text-white shadow-xl text-lg px-8 py-4 font-bold transform hover:scale-105 transition-all duration-300 overflow-hidden group"
                 >
                   <Link to="/offerte-opvragen">
-                    <Target className="mr-2 h-5 w-5" />
-                    Offerte Opvragen
+                    <div className="absolute inset-0 bg-gradient-to-r from-blue-600 via-green-600 to-blue-800 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <div className="relative z-10 flex items-center">
+                      <Target className="mr-2 h-5 w-5" />
+                      Offerte Opvragen
+                    </div>
                   </Link>
                 </Button>
                 <Button
