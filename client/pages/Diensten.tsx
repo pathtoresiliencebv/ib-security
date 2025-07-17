@@ -34,7 +34,6 @@ const services = [
       "Incident rapportage",
     ],
     href: "/diensten/objectbeveiliging",
-    price: "vanaf €25/uur",
     popular: true,
   },
   {
@@ -49,7 +48,6 @@ const services = [
       "Bewaking",
     ],
     href: "/diensten/receptie-beveiliging",
-    price: "vanaf €22/uur",
     popular: false,
   },
   {
@@ -64,7 +62,6 @@ const services = [
       "Noodplanning",
     ],
     href: "/diensten/evenementenbeveiliging",
-    price: "vanaf €30/uur",
     popular: false,
   },
   {
@@ -79,7 +76,6 @@ const services = [
       "Politie contact",
     ],
     href: "/diensten/alarmopvolging",
-    price: "vanaf €150/maand",
     popular: false,
   },
   {
@@ -94,7 +90,6 @@ const services = [
       "Flexibele schema's",
     ],
     href: "/diensten/mobiele-surveillance",
-    price: "vanaf €45/ronde",
     popular: false,
   },
   {
@@ -109,7 +104,6 @@ const services = [
       "Familiecontact",
     ],
     href: "/diensten/zorgbeveiliging",
-    price: "vanaf €28/uur",
     popular: true,
   },
   {
@@ -124,7 +118,6 @@ const services = [
       "Therapie ondersteuning",
     ],
     href: "/diensten/ggz-beveiliging",
-    price: "vanaf €32/uur",
     popular: false,
   },
   {
@@ -139,7 +132,6 @@ const services = [
       "Kwaliteitsgarantie",
     ],
     href: "/diensten/uitzendbureau-beveiliging",
-    price: "vanaf €24/uur",
     popular: false,
   },
 ];
@@ -269,13 +261,6 @@ export default function Diensten() {
                             <span>{feature}</span>
                           </div>
                         ))}
-                      </div>
-
-                      {/* Price */}
-                      <div className="bg-blue-50 rounded-lg p-3 mb-6">
-                        <div className="text-blue-600 font-bold text-lg">
-                          {service.price}
-                        </div>
                       </div>
 
                       <div className="text-blue-600 font-bold group-hover:text-purple-600 transition-colors flex items-center justify-center">
