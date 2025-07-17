@@ -15,8 +15,17 @@ import {
   Building,
   HeartHandshake,
   Zap,
+  Star,
+  MapPin,
+  TrendingUp,
+  Target,
+  Lock,
+  Camera,
+  AlertTriangle,
+  ArrowRight,
 } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
 
 const services = [
   {
