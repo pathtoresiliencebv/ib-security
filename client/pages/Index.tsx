@@ -391,51 +391,197 @@ export default function Index() {
         </div>
       </section>
 
-      {/* Services Section */}
-      <section className="py-16">
+      {/* Enhanced Services Section */}
+      <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <Badge variant="outline" className="mb-4">
-              Onze Diensten
+          <div className="text-center mb-20">
+            <Badge variant="outline" className="mb-6 text-base px-4 py-2">
+              🔐 Onze Specialiteiten
             </Badge>
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Complete Beveiligingsoplossingen
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+              Complete
+              <span className="text-blue-600"> Beveiligingsoplossingen</span>
             </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
               Van objectbeveiliging tot zorgbeveiliging - wij bieden een breed
-              scala aan professionele beveiligingsdiensten.
+              scala aan professionele beveiligingsdiensten, elk afgestemd op uw
+              unieke behoeften.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
               <Card
                 key={index}
-                className="group hover:shadow-lg transition-shadow cursor-pointer"
+                className="group hover:shadow-2xl transition-all duration-300 cursor-pointer border-0 shadow-lg overflow-hidden"
               >
-                <Link to={service.href} className="block">
-                  <CardHeader>
-                    <div className="flex items-center space-x-3">
-                      <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center group-hover:bg-blue-600 group-hover:text-white transition-colors">
-                        <service.icon className="w-5 h-5 text-blue-600 group-hover:text-white" />
+                <Link to={service.href} className="block h-full">
+                  <div className="relative">
+                    <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 to-blue-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
+                    <CardHeader className="pb-4">
+                      <div className="flex items-start space-x-4">
+                        <div className="w-12 h-12 bg-gradient-to-br from-blue-100 to-blue-200 rounded-xl flex items-center justify-center group-hover:from-blue-600 group-hover:to-blue-700 group-hover:text-white transition-all duration-300 transform group-hover:scale-110 shadow-md">
+                          <service.icon className="w-6 h-6 text-blue-600 group-hover:text-white transition-colors" />
+                        </div>
+                        <div className="flex-1">
+                          <CardTitle className="text-xl font-bold group-hover:text-blue-600 transition-colors mb-2">
+                            {service.title}
+                          </CardTitle>
+                        </div>
+                        <ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-blue-600 group-hover:translate-x-1 transition-all duration-300" />
                       </div>
-                      <CardTitle className="text-lg group-hover:text-blue-600 transition-colors">
-                        {service.title}
-                      </CardTitle>
-                    </div>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-gray-600">{service.description}</p>
-                  </CardContent>
+                    </CardHeader>
+                    <CardContent>
+                      <p className="text-gray-600 leading-relaxed group-hover:text-gray-700 transition-colors">
+                        {service.description}
+                      </p>
+                      <div className="mt-4 text-sm font-medium text-blue-600 group-hover:text-blue-700 transition-colors">
+                        Meer informatie →
+                      </div>
+                    </CardContent>
+                  </div>
                 </Link>
               </Card>
             ))}
           </div>
 
-          <div className="text-center mt-12">
-            <Button asChild variant="outline" size="lg">
-              <Link to="/diensten">Alle Diensten Bekijken</Link>
+          <div className="text-center mt-16">
+            <Button
+              asChild
+              size="lg"
+              className="bg-blue-600 hover:bg-blue-700 text-white shadow-lg hover:shadow-xl transition-all transform hover:scale-105"
+            >
+              <Link to="/diensten">
+                <Shield className="mr-2 h-5 w-5" />
+                Alle Diensten Bekijken
+              </Link>
             </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* About Section */}
+      <section className="py-20 bg-gradient-to-br from-gray-900 to-blue-900 text-white relative overflow-hidden">
+        <div className="absolute inset-0 bg-black/20"></div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div>
+              <Badge
+                variant="outline"
+                className="mb-6 border-white/30 text-white bg-white/10"
+              >
+                Over IB Security
+              </Badge>
+              <h2 className="text-4xl md:text-5xl font-bold mb-6">
+                Meer dan 15 jaar
+                <span className="block text-blue-300">
+                  ervaring in beveiliging
+                </span>
+              </h2>
+              <p className="text-xl text-gray-300 mb-8 leading-relaxed">
+                IB Security is ontstaan uit de overtuiging dat beveiliging meer
+                is dan alleen bewaking. Het gaat om vertrouwen,
+                professionaliteit en een persoonlijke aanpak die past bij uw
+                situatie.
+              </p>
+
+              <div className="space-y-6 mb-8">
+                {companyValues.map((value, index) => (
+                  <div key={index} className="flex items-start space-x-4">
+                    <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <value.icon className="w-5 h-5 text-white" />
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-semibold mb-2">
+                        {value.title}
+                      </h3>
+                      <p className="text-gray-300">{value.description}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              <Button
+                asChild
+                size="lg"
+                className="bg-white text-blue-900 hover:bg-blue-50"
+              >
+                <Link to="/over-ibsecurity">
+                  Lees meer over ons
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
+              </Button>
+            </div>
+
+            <div className="relative">
+              <div className="bg-gradient-to-br from-blue-600 to-blue-800 rounded-2xl p-8 shadow-2xl">
+                <div className="text-center">
+                  <Shield className="w-24 h-24 text-white mx-auto mb-6 opacity-90" />
+                  <h3 className="text-2xl font-bold mb-4">
+                    Uw veiligheid, onze prioriteit
+                  </h3>
+                  <p className="text-blue-100 mb-6">
+                    Met state-of-the-art technologie en het best getrainde
+                    personeel zorgen wij ervoor dat u zich altijd veilig kunt
+                    voelen.
+                  </p>
+                  <div className="bg-white/10 rounded-lg p-4">
+                    <div className="text-3xl font-bold">ISO 27001</div>
+                    <div className="text-sm text-blue-200">Gecertificeerd</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <Badge variant="outline" className="mb-4">
+              Wat onze klanten zeggen
+            </Badge>
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+              Vertrouwd door
+              <span className="text-blue-600"> honderden bedrijven</span>
+            </h2>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+              Ontdek waarom onze klanten al jaren op ons vertrouwen voor hun
+              beveiligingsbehoeften.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {testimonials.map((testimonial, index) => (
+              <Card
+                key={index}
+                className="border-0 shadow-lg hover:shadow-xl transition-shadow duration-300"
+              >
+                <CardContent className="pt-6">
+                  <div className="flex mb-4">
+                    {[...Array(testimonial.rating)].map((_, i) => (
+                      <Star
+                        key={i}
+                        className="w-5 h-5 text-yellow-400 fill-current"
+                      />
+                    ))}
+                  </div>
+                  <blockquote className="text-gray-700 mb-6 italic leading-relaxed">
+                    "{testimonial.text}"
+                  </blockquote>
+                  <div className="border-t pt-4">
+                    <div className="font-semibold text-gray-900">
+                      {testimonial.name}
+                    </div>
+                    <div className="text-sm text-gray-600">
+                      {testimonial.company}
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </div>
       </section>
