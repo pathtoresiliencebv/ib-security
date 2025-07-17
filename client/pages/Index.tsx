@@ -572,7 +572,7 @@ export default function Index() {
               <div className="absolute -inset-4 bg-gradient-to-r from-blue-600 via-purple-600 to-blue-800 rounded-3xl blur opacity-30 group-hover:opacity-50 transition duration-500"></div>
               <div className="relative bg-white rounded-3xl p-2 shadow-4xl">
                 <img
-                  src="https://cdn.builder.io/api/v1/image/assets%2F18e64066d3874f39ae16c8e50727ae4d%2Fdf08b781620e4762bee954e4ebc22c39?format=webp&width=800"
+                  src="https://cdn.builder.io/api/v1/image/assets%2F18e64066d3874f39ae16c8e50727ae4d%2F47ef5d9678cb49c3b5ae98dfc25ff2f2?format=webp&width=800"
                   alt="Professionele IB Security beveiliger in actie"
                   className="w-full h-[600px] object-cover rounded-2xl shadow-2xl"
                 />
@@ -875,7 +875,7 @@ export default function Index() {
               <div className="absolute -inset-4 bg-gradient-to-r from-blue-600 via-purple-600 to-blue-800 rounded-3xl blur opacity-30 group-hover:opacity-50 transition duration-500"></div>
               <div className="relative bg-white rounded-3xl p-2 shadow-4xl">
                 <img
-                  src="https://cdn.builder.io/api/v1/image/assets%2F18e64066d3874f39ae16c8e50727ae4d%2Fdf08b781620e4762bee954e4ebc22c39?format=webp&width=800"
+                  src="https://cdn.builder.io/api/v1/image/assets%2F18e64066d3874f39ae16c8e50727ae4d%2F47ef5d9678cb49c3b5ae98dfc25ff2f2?format=webp&width=800"
                   alt="Professionele IB Security beveiliger in actie"
                   className="w-full h-[600px] object-cover rounded-2xl shadow-2xl"
                 />
