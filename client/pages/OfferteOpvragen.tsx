@@ -5,7 +5,13 @@ import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 import { Checkbox } from "@/components/ui/checkbox";
 import {
   Calculator,
@@ -33,73 +39,73 @@ const serviceOptions = [
     id: "object",
     name: "Objectbeveiliging",
     description: "24/7 beveiliging van uw bedrijfspand",
-    basePrice: "vanaf €25/uur"
+    basePrice: "vanaf €25/uur",
   },
   {
     id: "receptie",
     name: "Receptie beveiliging",
     description: "Professionele receptie met beveiligingstaak",
-    basePrice: "vanaf €22/uur"
+    basePrice: "vanaf €22/uur",
   },
   {
     id: "evenement",
     name: "Evenementenbeveiliging",
     description: "Veilige en succesvolle evenementen",
-    basePrice: "vanaf €30/uur"
+    basePrice: "vanaf €30/uur",
   },
   {
     id: "alarm",
     name: "Alarmopvolging",
     description: "24/7 monitoring en alarmopvolging",
-    basePrice: "vanaf €150/maand"
+    basePrice: "vanaf €150/maand",
   },
   {
     id: "mobiel",
     name: "Mobiele Surveillance",
     description: "Flexibele rondes en controles",
-    basePrice: "vanaf €45/ronde"
+    basePrice: "vanaf €45/ronde",
   },
   {
     id: "zorg",
     name: "Zorgbeveiliging",
     description: "Gespecialiseerde zorgbeveiliging",
-    basePrice: "vanaf €28/uur"
+    basePrice: "vanaf €28/uur",
   },
   {
     id: "ggz",
     name: "GGZ Beveiliging",
     description: "Empathische GGZ-beveiliging",
-    basePrice: "vanaf €32/uur"
+    basePrice: "vanaf €32/uur",
   },
   {
     id: "uitzend",
     name: "Uitzendbureau beveiliging",
     description: "Tijdelijk beveiligingspersoneel",
-    basePrice: "vanaf €24/uur"
-  }
+    basePrice: "vanaf €24/uur",
+  },
 ];
 
 const quoteBenefits = [
   {
     icon: CheckCircle,
     title: "100% Vrijblijvend",
-    description: "Geen verplichtingen, volledig gratis advies"
+    description: "Geen verplichtingen, volledig gratis advies",
   },
   {
     icon: Clock,
     title: "Binnen 24 uur",
-    description: "Snelle reactie en uitgebreide offerte"
+    description: "Snelle reactie en uitgebreide offerte",
   },
   {
     icon: Target,
     title: "Op Maat Gemaakt",
-    description: "Persoonlijk advies voor uw situatie"
+    description: "Persoonlijk advies voor uw situatie",
   },
   {
     icon: Euro,
     title: "Transparante Prijzen",
-    description: "Geen verborgen kosten, alles duidelijk"
-  }
+    description: "Geen verborgen kosten, alles duidelijk",
+  },
 ];
 
 export default function OfferteOpvragen() {
@@ -125,25 +131,30 @@ export default function OfferteOpvragen() {
     urgency: "",
 
     // Additional
-    newsletter: false
+    newsletter: false,
   });
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     console.log("Quote request submitted:", formData);
-    alert("Bedankt voor uw offerte aanvraag! Wij nemen binnen 24 uur contact met u op met een gedetailleerde offerte.");
+    alert(
+      "Bedankt voor uw offerte aanvraag! Wij nemen binnen 24 uur contact met u op met een gedetailleerde offerte.",
+    );
   };
 
-  const handleInputChange = (field: string, value: string | boolean | string[]) => {
-    setFormData(prev => ({ ...prev, [field]: value }));
+  const handleInputChange = (
+    field: string,
+    value: string | boolean | string[],
+  ) => {
+    setFormData((prev) => ({ ...prev, [field]: value }));
   };
 
   const handleServiceToggle = (serviceId: string) => {
-    setFormData(prev => ({
+    setFormData((prev) => ({
       ...prev,
       services: prev.services.includes(serviceId)
-        ? prev.services.filter(id => id !== serviceId)
-        : [...prev.services, serviceId]
+        ? prev.services.filter((id) => id !== serviceId)
+        : [...prev.services, serviceId],
     }));
   };
 
@@ -173,7 +184,8 @@ export default function OfferteOpvragen() {
               </span>
             </h1>
             <p className="text-2xl md:text-3xl text-blue-100 font-medium max-w-4xl mx-auto leading-relaxed">
-              Krijg binnen 24 uur een <span className="font-bold text-white">persoonlijke offerte</span>
+              Krijg binnen 24 uur een{" "}
+              <span className="font-bold text-white">persoonlijke offerte</span>
               op maat voor uw beveiligingsbehoeften.
             </p>
           </div>
@@ -185,12 +197,17 @@ export default function OfferteOpvragen() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {quoteBenefits.map((benefit, index) => (
-              <Card key={index} className="text-center hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border-0 shadow-lg animate-on-scroll-scale">
+              <Card
+                key={index}
+                className="text-center hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border-0 shadow-lg animate-on-scroll-scale"
+              >
                 <CardContent className="p-6">
                   <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-yellow-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
                     <benefit.icon className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-lg font-bold text-gray-900 mb-2">{benefit.title}</h3>
+                  <h3 className="text-lg font-bold text-gray-900 mb-2">
+                    {benefit.title}
+                  </h3>
                   <p className="text-gray-600 text-sm">{benefit.description}</p>
                 </CardContent>
               </Card>
@@ -211,7 +228,8 @@ export default function OfferteOpvragen() {
               <span className="block text-blue-600">Uw Behoeften</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Hoe meer details u ons geeft, hoe nauwkeuriger wij uw offerte kunnen maken.
+              Hoe meer details u ons geeft, hoe nauwkeuriger wij uw offerte
+              kunnen maken.
             </p>
           </div>
 
@@ -226,20 +244,28 @@ export default function OfferteOpvragen() {
                   </h3>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
-                      <Label htmlFor="name" className="text-sm font-bold text-gray-700 mb-2 block">
+                      <Label
+                        htmlFor="name"
+                        className="text-sm font-bold text-gray-700 mb-2 block"
+                      >
                         Volledige Naam *
                       </Label>
                       <Input
                         id="name"
                         required
                         value={formData.name}
-                        onChange={(e) => handleInputChange("name", e.target.value)}
+                        onChange={(e) =>
+                          handleInputChange("name", e.target.value)
+                        }
                         className="border-2 border-gray-200 focus:border-blue-500 text-lg py-4"
                         placeholder="Voor- en achternaam"
                       />
                     </div>
                     <div>
-                      <Label htmlFor="email" className="text-sm font-bold text-gray-700 mb-2 block">
+                      <Label
+                        htmlFor="email"
+                        className="text-sm font-bold text-gray-700 mb-2 block"
+                      >
                         E-mailadres *
                       </Label>
                       <Input
@@ -247,13 +273,18 @@ export default function OfferteOpvragen() {
                         type="email"
                         required
                         value={formData.email}
-                        onChange={(e) => handleInputChange("email", e.target.value)}
+                        onChange={(e) =>
+                          handleInputChange("email", e.target.value)
+                        }
                         className="border-2 border-gray-200 focus:border-blue-500 text-lg py-4"
                         placeholder="uw.email@bedrijf.nl"
                       />
                     </div>
                     <div>
-                      <Label htmlFor="phone" className="text-sm font-bold text-gray-700 mb-2 block">
+                      <Label
+                        htmlFor="phone"
+                        className="text-sm font-bold text-gray-700 mb-2 block"
+                      >
                         Telefoonnummer *
                       </Label>
                       <Input
@@ -261,20 +292,27 @@ export default function OfferteOpvragen() {
                         type="tel"
                         required
                         value={formData.phone}
-                        onChange={(e) => handleInputChange("phone", e.target.value)}
+                        onChange={(e) =>
+                          handleInputChange("phone", e.target.value)
+                        }
                         className="border-2 border-gray-200 focus:border-blue-500 text-lg py-4"
                         placeholder="+31 6 12 34 56 78"
                       />
                     </div>
                     <div>
-                      <Label htmlFor="company" className="text-sm font-bold text-gray-700 mb-2 block">
+                      <Label
+                        htmlFor="company"
+                        className="text-sm font-bold text-gray-700 mb-2 block"
+                      >
                         Bedrijfsnaam *
                       </Label>
                       <Input
                         id="company"
                         required
                         value={formData.company}
-                        onChange={(e) => handleInputChange("company", e.target.value)}
+                        onChange={(e) =>
+                          handleInputChange("company", e.target.value)
+                        }
                         className="border-2 border-gray-200 focus:border-blue-500 text-lg py-4"
                         placeholder="Uw bedrijfsnaam"
                       />
@@ -294,8 +332,8 @@ export default function OfferteOpvragen() {
                         key={service.id}
                         className={`cursor-pointer transition-all duration-300 border-2 ${
                           formData.services.includes(service.id)
-                            ? 'border-blue-500 bg-blue-50 shadow-lg'
-                            : 'border-gray-200 hover:border-blue-300 hover:shadow-md'
+                            ? "border-blue-500 bg-blue-50 shadow-lg"
+                            : "border-gray-200 hover:border-blue-300 hover:shadow-md"
                         }`}
                         onClick={() => handleServiceToggle(service.id)}
                       >
@@ -307,9 +345,16 @@ export default function OfferteOpvragen() {
                               className="mt-1"
                             />
                             <div className="flex-1">
-                              <h4 className="font-bold text-lg text-gray-900 mb-1">{service.name}</h4>
-                              <p className="text-gray-600 text-sm mb-2">{service.description}</p>
-                              <Badge variant="outline" className="text-green-600 border-green-600">
+                              <h4 className="font-bold text-lg text-gray-900 mb-1">
+                                {service.name}
+                              </h4>
+                              <p className="text-gray-600 text-sm mb-2">
+                                {service.description}
+                              </p>
+                              <Badge
+                                variant="outline"
+                                className="text-green-600 border-green-600"
+                              >
                                 {service.basePrice}
                               </Badge>
                             </div>
@@ -328,35 +373,52 @@ export default function OfferteOpvragen() {
                   </h3>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
-                      <Label htmlFor="location" className="text-sm font-bold text-gray-700 mb-2 block">
+                      <Label
+                        htmlFor="location"
+                        className="text-sm font-bold text-gray-700 mb-2 block"
+                      >
                         Locatie/Adres *
                       </Label>
                       <Input
                         id="location"
                         required
                         value={formData.location}
-                        onChange={(e) => handleInputChange("location", e.target.value)}
+                        onChange={(e) =>
+                          handleInputChange("location", e.target.value)
+                        }
                         className="border-2 border-gray-200 focus:border-blue-500 text-lg py-4"
                         placeholder="Stad of volledige adres"
                       />
                     </div>
                     <div>
-                      <Label htmlFor="startDate" className="text-sm font-bold text-gray-700 mb-2 block">
+                      <Label
+                        htmlFor="startDate"
+                        className="text-sm font-bold text-gray-700 mb-2 block"
+                      >
                         Gewenste Startdatum
                       </Label>
                       <Input
                         id="startDate"
                         type="date"
                         value={formData.startDate}
-                        onChange={(e) => handleInputChange("startDate", e.target.value)}
+                        onChange={(e) =>
+                          handleInputChange("startDate", e.target.value)
+                        }
                         className="border-2 border-gray-200 focus:border-blue-500 text-lg py-4"
                       />
                     </div>
                     <div>
-                      <Label htmlFor="duration" className="text-sm font-bold text-gray-700 mb-2 block">
+                      <Label
+                        htmlFor="duration"
+                        className="text-sm font-bold text-gray-700 mb-2 block"
+                      >
                         Duur van de Opdracht
                       </Label>
-                      <Select onValueChange={(value) => handleInputChange("duration", value)}>
+                      <Select
+                        onValueChange={(value) =>
+                          handleInputChange("duration", value)
+                        }
+                      >
                         <SelectTrigger className="border-2 border-gray-200 focus:border-blue-500 text-lg py-4">
                           <SelectValue placeholder="Selecteer duur" />
                         </SelectTrigger>
@@ -367,24 +429,37 @@ export default function OfferteOpvragen() {
                           <SelectItem value="kwartaal">3 maanden</SelectItem>
                           <SelectItem value="halfjaar">6 maanden</SelectItem>
                           <SelectItem value="jaar">1 jaar</SelectItem>
-                          <SelectItem value="langdurig">Langdurig (>1 jaar)</SelectItem>
+                          <SelectItem value="langdurig">
+                            Langdurig (meer dan 1 jaar)
+                          </SelectItem>
                         </SelectContent>
                       </Select>
                     </div>
                     <div>
-                      <Label htmlFor="hours" className="text-sm font-bold text-gray-700 mb-2 block">
+                      <Label
+                        htmlFor="hours"
+                        className="text-sm font-bold text-gray-700 mb-2 block"
+                      >
                         Uren per Dag/Week
                       </Label>
-                      <Select onValueChange={(value) => handleInputChange("hours", value)}>
+                      <Select
+                        onValueChange={(value) =>
+                          handleInputChange("hours", value)
+                        }
+                      >
                         <SelectTrigger className="border-2 border-gray-200 focus:border-blue-500 text-lg py-4">
                           <SelectValue placeholder="Selecteer uren" />
                         </SelectTrigger>
                         <SelectContent>
                           <SelectItem value="8">8 uur (dagdienst)</SelectItem>
-                          <SelectItem value="12">12 uur (uitgebreide dienst)</SelectItem>
+                          <SelectItem value="12">
+                            12 uur (uitgebreide dienst)
+                          </SelectItem>
                           <SelectItem value="24">24 uur (24/7)</SelectItem>
                           <SelectItem value="variabel">Variabel</SelectItem>
-                          <SelectItem value="evenement">Per evenement</SelectItem>
+                          <SelectItem value="evenement">
+                            Per evenement
+                          </SelectItem>
                         </SelectContent>
                       </Select>
                     </div>
@@ -399,49 +474,88 @@ export default function OfferteOpvragen() {
                   </h3>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                     <div>
-                      <Label htmlFor="budget" className="text-sm font-bold text-gray-700 mb-2 block">
+                      <Label
+                        htmlFor="budget"
+                        className="text-sm font-bold text-gray-700 mb-2 block"
+                      >
                         Indicatief Budget
                       </Label>
-                      <Select onValueChange={(value) => handleInputChange("budget", value)}>
+                      <Select
+                        onValueChange={(value) =>
+                          handleInputChange("budget", value)
+                        }
+                      >
                         <SelectTrigger className="border-2 border-gray-200 focus:border-blue-500 text-lg py-4">
                           <SelectValue placeholder="Budget indicatie" />
                         </SelectTrigger>
                         <SelectContent>
-                          <SelectItem value="1000">€500 - €1.000 per maand</SelectItem>
-                          <SelectItem value="2500">€1.000 - €2.500 per maand</SelectItem>
-                          <SelectItem value="5000">€2.500 - €5.000 per maand</SelectItem>
-                          <SelectItem value="10000">€5.000 - €10.000 per maand</SelectItem>
-                          <SelectItem value="meer">Meer dan €10.000 per maand</SelectItem>
-                          <SelectItem value="bespreek">Wil ik bespreken</SelectItem>
+                          <SelectItem value="1000">
+                            €500 - €1.000 per maand
+                          </SelectItem>
+                          <SelectItem value="2500">
+                            €1.000 - €2.500 per maand
+                          </SelectItem>
+                          <SelectItem value="5000">
+                            €2.500 - €5.000 per maand
+                          </SelectItem>
+                          <SelectItem value="10000">
+                            €5.000 - €10.000 per maand
+                          </SelectItem>
+                          <SelectItem value="meer">
+                            Meer dan €10.000 per maand
+                          </SelectItem>
+                          <SelectItem value="bespreek">
+                            Wil ik bespreken
+                          </SelectItem>
                         </SelectContent>
                       </Select>
                     </div>
                     <div>
-                      <Label htmlFor="urgency" className="text-sm font-bold text-gray-700 mb-2 block">
+                      <Label
+                        htmlFor="urgency"
+                        className="text-sm font-bold text-gray-700 mb-2 block"
+                      >
                         Urgentie
                       </Label>
-                      <Select onValueChange={(value) => handleInputChange("urgency", value)}>
+                      <Select
+                        onValueChange={(value) =>
+                          handleInputChange("urgency", value)
+                        }
+                      >
                         <SelectTrigger className="border-2 border-gray-200 focus:border-blue-500 text-lg py-4">
                           <SelectValue placeholder="Hoe urgent?" />
                         </SelectTrigger>
                         <SelectContent>
-                          <SelectItem value="spoed">🚨 Zeer urgent (vandaag)</SelectItem>
-                          <SelectItem value="snel">⚡ Snel (deze week)</SelectItem>
-                          <SelectItem value="normaal">📅 Normaal (deze maand)</SelectItem>
-                          <SelectItem value="planning">💭 Planning (over meer dan 1 maand)</SelectItem>
+                          <SelectItem value="spoed">
+                            🚨 Zeer urgent (vandaag)
+                          </SelectItem>
+                          <SelectItem value="snel">
+                            ⚡ Snel (deze week)
+                          </SelectItem>
+                          <SelectItem value="normaal">
+                            📅 Normaal (deze maand)
+                          </SelectItem>
+                          <SelectItem value="planning">
+                            💭 Planning (over meer dan 1 maand)
+                          </SelectItem>
                         </SelectContent>
                       </Select>
                     </div>
                   </div>
 
                   <div>
-                    <Label htmlFor="requirements" className="text-sm font-bold text-gray-700 mb-2 block">
+                    <Label
+                      htmlFor="requirements"
+                      className="text-sm font-bold text-gray-700 mb-2 block"
+                    >
                       Specifieke Eisen & Wensen
                     </Label>
                     <Textarea
                       id="requirements"
                       value={formData.requirements}
-                      onChange={(e) => handleInputChange("requirements", e.target.value)}
+                      onChange={(e) =>
+                        handleInputChange("requirements", e.target.value)
+                      }
                       className="border-2 border-gray-200 focus:border-blue-500 text-lg min-h-32"
                       placeholder="Beschrijf specifieke beveiligingseisen, gewenste certificeringen, speciale omstandigheden, etc..."
                     />
@@ -453,10 +567,13 @@ export default function OfferteOpvragen() {
                   <Checkbox
                     id="newsletter"
                     checked={formData.newsletter}
-                    onCheckedChange={(checked) => handleInputChange("newsletter", checked as boolean)}
+                    onCheckedChange={(checked) =>
+                      handleInputChange("newsletter", checked as boolean)
+                    }
                   />
                   <Label htmlFor="newsletter" className="text-sm text-gray-700">
-                    Ja, ik wil graag de IB Security nieuwsbrief ontvangen met beveiligingstips en updates
+                    Ja, ik wil graag de IB Security nieuwsbrief ontvangen met
+                    beveiligingstips en updates
                   </Label>
                 </div>
 
@@ -471,7 +588,8 @@ export default function OfferteOpvragen() {
                     ONTVANG MIJN GRATIS OFFERTE
                   </Button>
                   <p className="text-sm text-gray-500 mt-4">
-                    🔒 Uw gegevens worden vertrouwelijk behandeld en niet gedeeld met derden
+                    🔒 Uw gegevens worden vertrouwelijk behandeld en niet
+                    gedeeld met derden
                   </p>
                 </div>
               </form>
@@ -496,9 +614,12 @@ export default function OfferteOpvragen() {
                 <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-6 text-white font-black text-2xl">
                   1
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">Binnen 24 uur</h3>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">
+                  Binnen 24 uur
+                </h3>
                 <p className="text-gray-600">
-                  Wij nemen persoonlijk contact met u op om uw aanvraag te bespreken en eventuele vragen te stellen.
+                  Wij nemen persoonlijk contact met u op om uw aanvraag te
+                  bespreken en eventuele vragen te stellen.
                 </p>
               </CardContent>
             </Card>
@@ -508,9 +629,12 @@ export default function OfferteOpvragen() {
                 <div className="w-20 h-20 bg-gradient-to-br from-green-500 to-green-600 rounded-full flex items-center justify-center mx-auto mb-6 text-white font-black text-2xl">
                   2
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">Persoonlijk Advies</h3>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">
+                  Persoonlijk Advies
+                </h3>
                 <p className="text-gray-600">
-                  Een beveiligingsexpert bezoekt uw locatie voor een gratis veiligheidsanalyse en advies op maat.
+                  Een beveiligingsexpert bezoekt uw locatie voor een gratis
+                  veiligheidsanalyse en advies op maat.
                 </p>
               </CardContent>
             </Card>
@@ -520,9 +644,12 @@ export default function OfferteOpvragen() {
                 <div className="w-20 h-20 bg-gradient-to-br from-purple-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-6 text-white font-black text-2xl">
                   3
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">Gedetailleerde Offerte</h3>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">
+                  Gedetailleerde Offerte
+                </h3>
                 <p className="text-gray-600">
-                  U ontvangt een transparante offerte met alle details, kosten en een voorstel voor de beste beveiligingsoplossing.
+                  U ontvangt een transparante offerte met alle details, kosten
+                  en een voorstel voor de beste beveiligingsoplossing.
                 </p>
               </CardContent>
             </Card>
