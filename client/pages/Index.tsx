@@ -23,9 +23,14 @@ import {
   Camera,
   AlertTriangle,
   ArrowRight,
+  Sparkles,
+  Flame,
+  Cpu,
+  Globe,
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
+import { useScrollAnimationMultiple } from "@/hooks/useScrollAnimation";
 
 const services = [
   {
