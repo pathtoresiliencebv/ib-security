@@ -373,41 +373,63 @@ export default function Index() {
         </div>
       </section>
 
-      {/* Enhanced Features Section */}
-      <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50/30">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <Badge variant="outline" className="mb-4">
-              Waarom IB Security
+      {/* Ultra-Professional Features Section */}
+      <section className="py-32 bg-gradient-to-br from-slate-50 via-blue-50/50 to-indigo-50/30 relative overflow-hidden">
+        {/* Background Elements */}
+        <div className="absolute inset-0 opacity-5">
+          <div className="absolute top-20 right-20 w-96 h-96 bg-blue-500 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-20 left-20 w-80 h-80 bg-purple-500 rounded-full blur-3xl"></div>
+        </div>
+
+        <div className="relative max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-24 animate-on-scroll">
+            <Badge className="mb-8 text-lg px-6 py-3 font-bold bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg">
+              <Flame className="mr-2 h-5 w-5" />
+              WAAROM IB SECURITY DE BESTE KEUZE IS
             </Badge>
-            <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
-              Uw vertrouwde
-              <span className="text-blue-600"> beveiligingspartner</span>
+            <h2 className="font-display text-5xl md:text-8xl font-black text-gray-900 mb-8 text-shadow-lg">
+              UW VERTROUWDE
+              <span className="block bg-gradient-to-r from-blue-600 via-purple-600 to-blue-800 bg-clip-text text-transparent">
+                BEVEILIGINGSPARTNER
+              </span>
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Wij onderscheiden ons door kwaliteit, betrouwbaarheid en een
-              persoonlijke aanpak die past bij uw specifieke behoeften.
+            <p className="text-2xl md:text-3xl text-gray-700 max-w-5xl mx-auto font-medium leading-relaxed">
+              Wij onderscheiden ons door{" "}
+              <span className="font-bold text-blue-600">
+                ongeëvenaarde kwaliteit
+              </span>
+              , absolute betrouwbaarheid en een persoonlijke aanpak die perfect
+              aansluit bij uw specifieke behoeften.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
             {features.map((feature, index) => (
               <Card
                 key={index}
-                className="text-center group hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border-0 shadow-lg"
+                className={`text-center group hover:shadow-4xl transition-all duration-500 transform hover:-translate-y-6 hover:rotate-1 border-0 shadow-2xl bg-white/80 backdrop-blur-lg animate-on-scroll-scale overflow-hidden relative`}
+                style={{ animationDelay: `${index * 0.2}s` }}
               >
-                <CardContent className="pt-8 pb-6">
+                {/* Gradient Border Effect */}
+                <div className="absolute inset-0 bg-gradient-to-r from-blue-400 via-purple-500 to-blue-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-[2px] rounded-2xl">
+                  <div className="bg-white rounded-2xl h-full w-full"></div>
+                </div>
+
+                <CardContent className="relative pt-12 pb-8 px-6">
                   <div
-                    className={`mx-auto w-16 h-16 ${feature.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}
+                    className={`mx-auto w-24 h-24 ${feature.color} rounded-3xl flex items-center justify-center mb-8 group-hover:scale-125 group-hover:rotate-12 transition-all duration-500 shadow-xl group-hover:shadow-glow`}
                   >
-                    <feature.icon className="w-8 h-8" />
+                    <feature.icon className="w-12 h-12 group-hover:scale-110 transition-transform duration-300" />
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">
-                    {feature.title}
+                  <h3 className="text-2xl font-black text-gray-900 mb-4 group-hover:text-blue-600 transition-colors font-heading">
+                    {feature.title.toUpperCase()}
                   </h3>
-                  <p className="text-gray-600 leading-relaxed">
+                  <p className="text-gray-700 leading-relaxed text-lg font-medium group-hover:text-gray-900 transition-colors">
                     {feature.description}
                   </p>
+
+                  {/* Hover Effect Overlay */}
+                  <div className="absolute bottom-0 left-0 w-full h-2 bg-gradient-to-r from-blue-500 to-purple-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
                 </CardContent>
               </Card>
             ))}
