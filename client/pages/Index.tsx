@@ -215,38 +215,93 @@ function useCounter(end: number, duration: number = 2000) {
 export default function Index() {
   return (
     <Layout>
-      {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 text-white">
-        <div className="absolute inset-0 bg-black/20"></div>
+      {/* Enhanced Hero Section */}
+      <section className="relative bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 text-white overflow-hidden">
+        {/* Animated Background Pattern */}
+        <div className="absolute inset-0">
+          <div className="absolute inset-0 bg-black/20"></div>
+          <div className="absolute inset-0 opacity-10">
+            <div className="absolute top-10 left-10 animate-pulse">
+              <Shield className="w-24 h-24 text-white/30" />
+            </div>
+            <div className="absolute top-32 right-20 animate-pulse delay-1000">
+              <Lock className="w-16 h-16 text-white/20" />
+            </div>
+            <div className="absolute bottom-20 left-32 animate-pulse delay-500">
+              <Camera className="w-20 h-20 text-white/25" />
+            </div>
+            <div className="absolute bottom-32 right-16 animate-pulse delay-700">
+              <Eye className="w-18 h-18 text-white/30" />
+            </div>
+            {/* Grid Pattern */}
+            <div className="absolute inset-0 bg-grid-white/5 bg-[size:50px_50px]"></div>
+          </div>
+        </div>
+
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32">
           <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
+            <div className="mb-6">
+              <Badge
+                variant="outline"
+                className="border-white/30 text-white bg-white/10 backdrop-blur-sm mb-4"
+              >
+                🛡️ Uw Betrouwbare Beveiligingspartner
+              </Badge>
+            </div>
+            <h1 className="text-4xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">
               Professionele Beveiliging
-              <span className="block text-blue-200">voor Nederland</span>
+              <span className="block text-blue-200 text-3xl md:text-5xl mt-2">
+                voor heel Nederland
+              </span>
             </h1>
-            <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto leading-relaxed">
-              IB Security biedt betrouwbare beveiligingsdiensten voor bedrijven,
-              zorginstellingen en evenementen. Uw veiligheid is onze prioriteit.
+            <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto leading-relaxed text-blue-100">
+              IB Security biedt 24/7 betrouwbare beveiligingsdiensten voor
+              bedrijven, zorginstellingen en evenementen. Met meer dan 15 jaar
+              ervaring zijn wij uw vertrouwde partner voor alle
+              beveiligingsbehoeften.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <Button
                 asChild
                 size="lg"
-                className="bg-white text-blue-900 hover:bg-blue-50"
+                className="bg-white text-blue-900 hover:bg-blue-50 shadow-xl hover:shadow-2xl transition-all transform hover:scale-105"
               >
-                <Link to="/offerte-opvragen">Gratis Offerte Opvragen</Link>
+                <Link to="/offerte-opvragen">
+                  <Shield className="mr-2 h-5 w-5" />
+                  Gratis Offerte Opvragen
+                </Link>
               </Button>
               <Button
                 asChild
                 variant="outline"
                 size="lg"
-                className="border-white text-white hover:bg-white hover:text-blue-900"
+                className="border-white text-white hover:bg-white hover:text-blue-900 backdrop-blur-sm bg-white/10"
               >
                 <Link to="/contact">
                   <Phone className="mr-2 h-4 w-4" />
                   Direct Contact
                 </Link>
               </Button>
+            </div>
+
+            {/* Quick Stats in Hero */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-2xl mx-auto text-center">
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-3">
+                <div className="text-2xl font-bold">500+</div>
+                <div className="text-sm text-blue-200">Klanten</div>
+              </div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-3">
+                <div className="text-2xl font-bold">15+</div>
+                <div className="text-sm text-blue-200">Jaar</div>
+              </div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-3">
+                <div className="text-2xl font-bold">24/7</div>
+                <div className="text-sm text-blue-200">Service</div>
+              </div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-3">
+                <div className="text-2xl font-bold">99.8%</div>
+                <div className="text-sm text-blue-200">Succes</div>
+              </div>
             </div>
           </div>
         </div>
