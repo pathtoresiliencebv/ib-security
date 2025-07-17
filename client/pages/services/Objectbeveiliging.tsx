@@ -357,9 +357,7 @@ export default function Objectbeveiliging() {
                   <h3 className="text-2xl font-bold text-gray-900 mb-4">
                     {pkg.name}
                   </h3>
-                  <div className="text-4xl font-black text-blue-600 mb-6">
-                    {pkg.price}
-                  </div>
+
                   <div className="space-y-3 mb-8">
                     {pkg.features.map((feature, idx) => (
                       <div
