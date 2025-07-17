@@ -135,8 +135,6 @@ const whyChooseIB = [
 const packages = [
   {
     name: "Basis Mobiele Surveillance",
-    price: "€45",
-    unit: "per ronde",
     features: [
       "1-2 controlerondes per dag",
       "Standaard rapportage",
@@ -148,8 +146,6 @@ const packages = [
   },
   {
     name: "Intensieve Surveillance",
-    price: "€35",
-    unit: "per ronde",
     features: [
       "3-5 controlerondes per dag",
       "Uitgebreide rapportage",
@@ -162,8 +158,6 @@ const packages = [
   },
   {
     name: "Premium 24/7 Surveillance",
-    price: "Op maat",
-    unit: "maandprijs",
     features: [
       "Continue surveillance dekking",
       "Real-time monitoring",
