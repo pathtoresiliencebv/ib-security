@@ -268,15 +268,15 @@ export default function Index() {
               </Badge>
             </div>
 
-            {/* Ultra-Bold Hero Title */}
-            <h1 className="font-display text-6xl md:text-9xl font-black mb-8 animate-scale-in text-shadow-xl">
+            {/* Hero Title - Verkleind */}
+            <h1 className="font-display text-4xl md:text-6xl font-black mb-8 animate-scale-in text-shadow-xl">
               <span className="bg-gradient-to-r from-white via-blue-100 to-white bg-clip-text text-transparent leading-tight">
                 PROFESSIONELE
               </span>
-              <span className="block bg-gradient-to-r from-blue-200 via-white to-blue-200 bg-clip-text text-transparent text-5xl md:text-7xl mt-4 font-heavy">
+              <span className="block bg-gradient-to-r from-blue-200 via-white to-blue-200 bg-clip-text text-transparent text-3xl md:text-5xl mt-4 font-heavy">
                 BEVEILIGING
               </span>
-              <span className="block text-3xl md:text-5xl mt-6 font-heading text-blue-200 opacity-90">
+              <span className="block text-xl md:text-3xl mt-6 font-heading text-blue-200 opacity-90">
                 voor heel Nederland
               </span>
             </h1>
@@ -299,11 +299,14 @@ export default function Index() {
               <Button
                 asChild
                 size="lg"
-                className="bg-white text-blue-900 hover:bg-blue-50 shadow-4xl hover:shadow-glow-intense transition-all duration-300 transform hover:scale-110 text-xl px-12 py-6 font-bold-pro animate-bounce-subtle"
+                className="relative bg-gradient-to-r from-blue-600 via-purple-600 to-blue-800 hover:from-blue-700 hover:via-purple-700 hover:to-blue-900 text-white shadow-4xl hover:shadow-glow-intense transition-all duration-300 transform hover:scale-105 text-xl px-12 py-6 font-bold overflow-hidden group"
               >
                 <Link to="/offerte-opvragen">
-                  <Shield className="mr-3 h-6 w-6" />
-                  GRATIS PREMIUM OFFERTE
+                  <div className="absolute inset-0 bg-gradient-to-r from-purple-600 via-blue-600 to-purple-800 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <div className="relative z-10 flex items-center">
+                    <Shield className="mr-3 h-6 w-6" />
+                    GRATIS PREMIUM OFFERTE
+                  </div>
                 </Link>
               </Button>
               <Button
