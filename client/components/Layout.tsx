@@ -51,11 +51,12 @@ export default function Layout({ children }: LayoutProps) {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             {/* Logo */}
-            <Link to="/" className="flex items-center space-x-2">
-              <Shield className="h-8 w-8 text-blue-600" />
-              <span className="text-xl font-bold text-gray-900">
-                IB Security
-              </span>
+            <Link to="/" className="flex items-center">
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets%2F18e64066d3874f39ae16c8e50727ae4d%2F03446dedafa7410c8db314002c1a0664?format=webp&width=800"
+                alt="IB Security"
+                className="h-12 w-auto object-contain"
+              />
             </Link>
 
             {/* Desktop Navigation */}
@@ -179,9 +180,12 @@ export default function Layout({ children }: LayoutProps) {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Company Info */}
             <div>
-              <div className="flex items-center space-x-2 mb-4">
-                <Shield className="h-6 w-6 text-blue-400" />
-                <span className="text-lg font-bold">IB Security</span>
+              <div className="mb-4">
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets%2F18e64066d3874f39ae16c8e50727ae4d%2F03446dedafa7410c8db314002c1a0664?format=webp&width=800"
+                  alt="IB Security"
+                  className="h-16 w-auto object-contain"
+                />
               </div>
               <p className="text-gray-400 mb-4">
                 Professionele beveiligingsdiensten voor Nederland. Wij zorgen
