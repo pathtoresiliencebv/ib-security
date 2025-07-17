@@ -48,7 +48,7 @@ export default function Beveiligingsopvanglocatie() {
               <Button
                 asChild
                 size="lg"
-                className="bg-white text-amber-900 hover:bg-amber-50 shadow-xl text-lg px-8 py-4 font-bold"
+                className="bg-gradient-to-r from-amber-600 to-orange-600 hover:from-amber-700 hover:to-orange-700 text-white shadow-xl text-lg px-8 py-4 font-bold transform hover:scale-105 transition-all duration-300"
               >
                 <Link to="/offerte-opvragen">
                   <Target className="mr-2 h-5 w-5" />
