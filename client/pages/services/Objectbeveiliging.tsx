@@ -178,7 +178,7 @@ export default function Objectbeveiliging() {
                 <Button
                   asChild
                   size="lg"
-                  className="bg-white text-blue-900 hover:bg-blue-50 shadow-xl text-lg px-8 py-4 font-bold"
+                  className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white shadow-xl text-lg px-8 py-4 font-bold transform hover:scale-105 transition-all duration-300"
                 >
                   <Link to="/offerte-opvragen">
                     <Target className="mr-2 h-5 w-5" />
