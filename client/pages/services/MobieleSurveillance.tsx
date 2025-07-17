@@ -225,7 +225,7 @@ export default function MobieleSurveillance() {
                 <Button
                   asChild
                   size="lg"
-                  className="bg-white text-blue-900 hover:bg-blue-50 shadow-xl text-lg px-8 py-4 font-bold"
+                  className="bg-gradient-to-r from-green-600 to-blue-600 hover:from-green-700 hover:to-blue-700 text-white shadow-xl text-lg px-8 py-4 font-bold transform hover:scale-105 transition-all duration-300"
                 >
                   <Link to="/offerte-opvragen">
                     <Target className="mr-2 h-5 w-5" />
