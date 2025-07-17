@@ -331,11 +331,17 @@ export default function OfferteOpvragen() {
                       >
                         <CardContent className="p-6">
                           <div className="flex items-start space-x-4">
-                            <Checkbox
-                              checked={formData.services.includes(service.id)}
-                              readOnly
-                              className="mt-1 pointer-events-none"
-                            />
+                            <div
+                              className={`w-5 h-5 border-2 rounded mt-1 flex items-center justify-center ${
+                                formData.services.includes(service.id)
+                                  ? "bg-blue-500 border-blue-500"
+                                  : "border-gray-300"
+                              }`}
+                            >
+                              {formData.services.includes(service.id) && (
+                                <CheckCircle className="w-3 h-3 text-white" />
+                              )}
+                            </div>
                             <div className="flex-1">
                               <h4 className="font-bold text-lg text-gray-900 mb-1">
                                 {service.name}
