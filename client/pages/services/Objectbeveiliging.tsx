@@ -384,7 +384,7 @@ export default function Objectbeveiliging() {
             Bescherm uw bedrijfspand met de meest betrouwbare objectbeveiliging
             van Nederland. Ontvang binnen 24 uur een persoonlijke offerte.
           </p>
-          <div className="flex flex-col sm:flex-row gap-6 justify-center">
+          <div className="flex justify-center">
             <Button
               asChild
               size="lg"
@@ -394,17 +394,6 @@ export default function Objectbeveiliging() {
                 <Target className="mr-3 h-6 w-6" />
                 GRATIS OFFERTE
               </Link>
-            </Button>
-            <Button
-              asChild
-              variant="outline"
-              size="lg"
-              className="border-2 border-white text-white hover:bg-white hover:text-blue-600 text-xl px-12 py-6 font-bold"
-            >
-              <a href="tel:+31881234567">
-                <Phone className="mr-3 h-6 w-6" />
-                088 123 4567
-              </a>
             </Button>
           </div>
         </div>
