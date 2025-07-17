@@ -218,96 +218,157 @@ function useCounter(end: number, duration: number = 2000) {
 }
 
 export default function Index() {
+  useScrollAnimationMultiple();
+
   return (
     <Layout>
-      {/* Enhanced Hero Section */}
-      <section className="relative bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 text-white overflow-hidden">
-        {/* Animated Background Pattern */}
+      {/* Ultra-Premium Hero Section */}
+      <section className="relative min-h-screen bg-security-gradient text-white overflow-hidden flex items-center">
+        {/* Advanced Animated Background */}
         <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-black/20"></div>
-          <div className="absolute inset-0 opacity-10">
-            <div className="absolute top-10 left-10 animate-pulse">
-              <Shield className="w-24 h-24 text-white/30" />
+          <div className="absolute inset-0 bg-black/30"></div>
+
+          {/* Floating Security Icons */}
+          <div className="absolute inset-0 opacity-15">
+            <div className="absolute top-10 left-10 animate-float">
+              <Shield className="w-32 h-32 text-white/40" />
             </div>
-            <div className="absolute top-32 right-20 animate-pulse delay-1000">
-              <Lock className="w-16 h-16 text-white/20" />
+            <div className="absolute top-40 right-20 animate-float-delay">
+              <Lock className="w-24 h-24 text-white/30" />
             </div>
-            <div className="absolute bottom-20 left-32 animate-pulse delay-500">
-              <Camera className="w-20 h-20 text-white/25" />
+            <div className="absolute bottom-32 left-32 animate-float-slow">
+              <Camera className="w-28 h-28 text-white/35" />
             </div>
-            <div className="absolute bottom-32 right-16 animate-pulse delay-700">
-              <Eye className="w-18 h-18 text-white/30" />
+            <div className="absolute bottom-20 right-16 animate-float animate-pulse">
+              <Eye className="w-24 h-24 text-white/40" />
             </div>
-            {/* Grid Pattern */}
-            <div className="absolute inset-0 bg-grid-white/5 bg-[size:50px_50px]"></div>
+            <div className="absolute top-1/2 left-1/4 animate-pulse-slow">
+              <Cpu className="w-20 h-20 text-white/25" />
+            </div>
+            <div className="absolute top-1/3 right-1/4 animate-float-delay">
+              <Globe className="w-16 h-16 text-white/30" />
+            </div>
+
+            {/* Advanced Grid Pattern */}
+            <div className="absolute inset-0 bg-grid-white/5 bg-[size:60px_60px] animate-pulse"></div>
           </div>
+
+          {/* Gradient Overlays */}
+          <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-blue-900/30 via-transparent to-purple-900/20"></div>
+          <div className="absolute bottom-0 left-0 w-full h-full bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
         </div>
 
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32">
+        <div className="relative w-full max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 py-32">
           <div className="text-center">
-            <div className="mb-6">
-              <Badge
-                variant="outline"
-                className="border-white/30 text-white bg-white/10 backdrop-blur-sm mb-4"
-              >
-                🛡️ Uw Betrouwbare Beveiligingspartner
+            {/* Premium Badge */}
+            <div className="mb-8 animate-fade-in-up">
+              <Badge className="glass-effect border-white/30 text-white text-lg px-6 py-3 font-bold-pro animate-glow-pulse">
+                <Sparkles className="mr-2 h-5 w-5" />
+                🛡️ NEDERLAND'S PREMIUM BEVEILIGINGSPARTNER
               </Badge>
             </div>
-            <h1 className="text-4xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">
-              Professionele Beveiliging
-              <span className="block text-blue-200 text-3xl md:text-5xl mt-2">
+
+            {/* Ultra-Bold Hero Title */}
+            <h1 className="font-display text-6xl md:text-9xl font-black mb-8 animate-scale-in text-shadow-xl">
+              <span className="bg-gradient-to-r from-white via-blue-100 to-white bg-clip-text text-transparent leading-tight">
+                PROFESSIONELE
+              </span>
+              <span className="block bg-gradient-to-r from-blue-200 via-white to-blue-200 bg-clip-text text-transparent text-5xl md:text-7xl mt-4 font-heavy">
+                BEVEILIGING
+              </span>
+              <span className="block text-3xl md:text-5xl mt-6 font-heading text-blue-200 opacity-90">
                 voor heel Nederland
               </span>
             </h1>
-            <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto leading-relaxed text-blue-100">
-              IB Security biedt 24/7 betrouwbare beveiligingsdiensten voor
-              bedrijven, zorginstellingen en evenementen. Met meer dan 15 jaar
-              ervaring zijn wij uw vertrouwde partner voor alle
-              beveiligingsbehoeften.
+
+            {/* Enhanced Description */}
+            <p className="text-2xl md:text-3xl mb-12 max-w-5xl mx-auto leading-relaxed text-blue-50 font-medium animate-fade-in-up">
+              IB Security levert{" "}
+              <span className="font-bold text-white">
+                24/7 premium beveiligingsdiensten
+              </span>{" "}
+              voor bedrijven, zorginstellingen en evenementen. Met{" "}
+              <span className="font-bold text-white">
+                meer dan 15 jaar expertise
+              </span>{" "}
+              zijn wij uw vertrouwde partner voor alle beveiligingsbehoeften.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+
+            {/* Premium Action Buttons */}
+            <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16 animate-slide-in-left">
               <Button
                 asChild
                 size="lg"
-                className="bg-white text-blue-900 hover:bg-blue-50 shadow-xl hover:shadow-2xl transition-all transform hover:scale-105"
+                className="bg-white text-blue-900 hover:bg-blue-50 shadow-4xl hover:shadow-glow-intense transition-all duration-300 transform hover:scale-110 text-xl px-12 py-6 font-bold-pro animate-bounce-subtle"
               >
                 <Link to="/offerte-opvragen">
-                  <Shield className="mr-2 h-5 w-5" />
-                  Gratis Offerte Opvragen
+                  <Shield className="mr-3 h-6 w-6" />
+                  GRATIS PREMIUM OFFERTE
                 </Link>
               </Button>
               <Button
                 asChild
                 variant="outline"
                 size="lg"
-                className="border-white text-white hover:bg-white hover:text-blue-900 backdrop-blur-sm bg-white/10"
+                className="glass-effect border-2 border-white text-white hover:bg-white hover:text-blue-900 text-xl px-12 py-6 font-bold backdrop-blur-xl shadow-3xl"
               >
                 <Link to="/contact">
-                  <Phone className="mr-2 h-4 w-4" />
-                  Direct Contact
+                  <Phone className="mr-3 h-6 w-6" />
+                  DIRECT CONTACT
                 </Link>
               </Button>
             </div>
 
-            {/* Quick Stats in Hero */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-2xl mx-auto text-center">
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-3">
-                <div className="text-2xl font-bold">500+</div>
-                <div className="text-sm text-blue-200">Klanten</div>
+            {/* Enhanced Quick Stats */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto text-center animate-slide-in-right">
+              <div className="glass-effect rounded-2xl p-6 group hover:shadow-glow transition-all duration-300 transform hover:scale-105">
+                <div className="text-4xl md:text-5xl font-black mb-2 font-display text-white">
+                  500+
+                </div>
+                <div className="text-lg font-bold text-blue-200 uppercase tracking-wider">
+                  Klanten
+                </div>
+                <div className="text-sm text-blue-300 mt-1">Vertrouwen ons</div>
               </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-3">
-                <div className="text-2xl font-bold">15+</div>
-                <div className="text-sm text-blue-200">Jaar</div>
+              <div className="glass-effect rounded-2xl p-6 group hover:shadow-glow transition-all duration-300 transform hover:scale-105">
+                <div className="text-4xl md:text-5xl font-black mb-2 font-display text-white">
+                  15+
+                </div>
+                <div className="text-lg font-bold text-blue-200 uppercase tracking-wider">
+                  Jaar
+                </div>
+                <div className="text-sm text-blue-300 mt-1">Ervaring</div>
               </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-3">
-                <div className="text-2xl font-bold">24/7</div>
-                <div className="text-sm text-blue-200">Service</div>
+              <div className="glass-effect rounded-2xl p-6 group hover:shadow-glow transition-all duration-300 transform hover:scale-105">
+                <div className="text-4xl md:text-5xl font-black mb-2 font-display text-white">
+                  24/7
+                </div>
+                <div className="text-lg font-bold text-blue-200 uppercase tracking-wider">
+                  Service
+                </div>
+                <div className="text-sm text-blue-300 mt-1">
+                  Altijd bereikbaar
+                </div>
               </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-3">
-                <div className="text-2xl font-bold">99.8%</div>
-                <div className="text-sm text-blue-200">Succes</div>
+              <div className="glass-effect rounded-2xl p-6 group hover:shadow-glow transition-all duration-300 transform hover:scale-105">
+                <div className="text-4xl md:text-5xl font-black mb-2 font-display text-white">
+                  99.8%
+                </div>
+                <div className="text-lg font-bold text-blue-200 uppercase tracking-wider">
+                  Succes
+                </div>
+                <div className="text-sm text-blue-300 mt-1">
+                  Betrouwbaarheid
+                </div>
               </div>
             </div>
+          </div>
+        </div>
+
+        {/* Scroll Indicator */}
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+          <div className="w-6 h-10 border-2 border-white/50 rounded-full flex justify-center">
+            <div className="w-1 h-3 bg-white/70 rounded-full mt-2 animate-pulse"></div>
           </div>
         </div>
       </section>
