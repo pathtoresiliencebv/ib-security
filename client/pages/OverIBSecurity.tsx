@@ -377,7 +377,7 @@ export default function OverIBSecurity() {
             aan IB Security. Neem vandaag nog contact op voor een vrijblijvend
             gesprek.
           </p>
-          <div className="flex flex-col sm:flex-row gap-6 justify-center">
+          <div className="flex justify-center">
             <Button
               asChild
               size="lg"
@@ -386,17 +386,6 @@ export default function OverIBSecurity() {
               <Link to="/contact">
                 <Phone className="mr-3 h-6 w-6" />
                 DIRECT CONTACT
-              </Link>
-            </Button>
-            <Button
-              asChild
-              variant="outline"
-              size="lg"
-              className="border-2 border-white text-white hover:bg-white hover:text-blue-600 text-xl px-12 py-6 font-bold"
-            >
-              <Link to="/offerte-opvragen">
-                <Mail className="mr-3 h-6 w-6" />
-                GRATIS OFFERTE
               </Link>
             </Button>
           </div>
