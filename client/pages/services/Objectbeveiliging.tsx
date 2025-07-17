@@ -171,7 +171,7 @@ export default function Objectbeveiliging() {
                 </span>
                 . Uw veiligheid, onze prioriteit.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4">
+              <div className="flex justify-center">
                 <Button
                   asChild
                   size="lg"
@@ -183,17 +183,6 @@ export default function Objectbeveiliging() {
                       <Target className="mr-2 h-5 w-5" />
                       Offerte Opvragen
                     </div>
-                  </Link>
-                </Button>
-                <Button
-                  asChild
-                  variant="outline"
-                  size="lg"
-                  className="border-white text-white hover:bg-white hover:text-blue-900 text-lg px-8 py-4 font-bold"
-                >
-                  <Link to="/contact">
-                    <Phone className="mr-2 h-5 w-5" />
-                    Direct Contact
                   </Link>
                 </Button>
               </div>
