@@ -464,9 +464,6 @@ export default function MobieleSurveillance() {
                     {pkg.name}
                   </h3>
                   <div className="mb-2">
-                    <span className="text-4xl font-black text-green-600">
-                      {pkg.price}
-                    </span>
                     <span className="text-gray-600 ml-2">{pkg.unit}</span>
                   </div>
                   <div className="space-y-3 mb-8">
