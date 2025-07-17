@@ -333,7 +333,9 @@ export default function OfferteOpvragen() {
                           <div className="flex items-start space-x-4">
                             <Checkbox
                               checked={formData.services.includes(service.id)}
-                              onChange={() => handleServiceToggle(service.id)}
+                              onCheckedChange={() =>
+                                handleServiceToggle(service.id)
+                              }
                               className="mt-1"
                             />
                             <div className="flex-1">
