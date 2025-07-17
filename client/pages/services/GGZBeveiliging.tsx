@@ -67,7 +67,7 @@ export default function GGZBeveiliging() {
                 <Button
                   asChild
                   size="lg"
-                  className="bg-white text-indigo-900 hover:bg-indigo-50 shadow-xl text-lg px-8 py-4 font-bold"
+                  className="bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white shadow-xl text-lg px-8 py-4 font-bold transform hover:scale-105 transition-all duration-300"
                 >
                   <Link to="/offerte-opvragen">
                     <Target className="mr-2 h-5 w-5" />
@@ -135,7 +135,7 @@ export default function GGZBeveiliging() {
             <Button
               asChild
               size="lg"
-              className="bg-white text-indigo-600 hover:bg-indigo-50 shadow-2xl text-xl px-12 py-6 font-bold transform hover:scale-105 transition-all duration-300"
+              className="bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white shadow-2xl text-xl px-12 py-6 font-bold transform hover:scale-105 transition-all duration-300"
             >
               <Link to="/offerte-opvragen">
                 <Brain className="mr-3 h-6 w-6" />
