@@ -112,7 +112,7 @@ export default function OverIBSecurity() {
               <Shield className="mr-3 h-6 w-6" />
               15+ JAAR EXPERTISE
             </Badge>
-            <h1 className="font-display text-5xl md:text-8xl font-black mb-8 text-shadow-xl">
+            <h1 className="font-display text-3xl md:text-5xl font-black mb-8 text-shadow-xl">
               <span className="bg-gradient-to-r from-white via-blue-200 to-white bg-clip-text text-transparent">
                 OVER
               </span>
