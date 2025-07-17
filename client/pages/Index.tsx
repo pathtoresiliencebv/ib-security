@@ -295,7 +295,7 @@ export default function Index() {
             </p>
 
             {/* Premium Action Buttons */}
-            <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16 animate-slide-in-left">
+            <div className="flex justify-center mb-16 animate-slide-in-left">
               <Button
                 asChild
                 size="lg"
@@ -307,17 +307,6 @@ export default function Index() {
                     <Shield className="mr-3 h-6 w-6" />
                     GRATIS PREMIUM OFFERTE
                   </div>
-                </Link>
-              </Button>
-              <Button
-                asChild
-                variant="outline"
-                size="lg"
-                className="glass-effect border-2 border-white text-white hover:bg-white hover:text-blue-900 text-xl px-12 py-6 font-bold backdrop-blur-xl shadow-3xl"
-              >
-                <Link to="/contact">
-                  <Phone className="mr-3 h-6 w-6" />
-                  DIRECT CONTACT
                 </Link>
               </Button>
             </div>
