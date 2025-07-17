@@ -53,7 +53,7 @@ export default function Layout({ children }: LayoutProps) {
             {/* Logo */}
             <Link to="/" className="flex items-center">
               <img
-                src="https://cdn.builder.io/api/v1/image/assets%2F18e64066d3874f39ae16c8e50727ae4d%2F03446dedafa7410c8db314002c1a0664?format=webp&width=800"
+                src="https://cdn.builder.io/api/v1/image/assets%2F18e64066d3874f39ae16c8e50727ae4d%2F0638bfb44aac437cafa7f3e4d910918b?format=webp&width=800"
                 alt="IB Security"
                 className="h-12 w-auto object-contain"
               />
@@ -182,7 +182,7 @@ export default function Layout({ children }: LayoutProps) {
             <div>
               <div className="mb-4">
                 <img
-                  src="https://cdn.builder.io/api/v1/image/assets%2F18e64066d3874f39ae16c8e50727ae4d%2F03446dedafa7410c8db314002c1a0664?format=webp&width=800"
+                  src="https://cdn.builder.io/api/v1/image/assets%2F18e64066d3874f39ae16c8e50727ae4d%2F551017989ab94819a0364ae20923ad87?format=webp&width=800"
                   alt="IB Security"
                   className="h-16 w-auto object-contain"
                 />
