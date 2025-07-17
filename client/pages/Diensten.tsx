@@ -341,7 +341,7 @@ export default function Diensten() {
             Ontdek welke beveiligingsoplossing het beste bij uw situatie past.
             Ontvang binnen 24 uur een persoonlijke offerte op maat.
           </p>
-          <div className="flex flex-col sm:flex-row gap-6 justify-center">
+          <div className="flex justify-center">
             <Button
               asChild
               size="lg"
@@ -350,17 +350,6 @@ export default function Diensten() {
               <Link to="/offerte-opvragen">
                 <Target className="mr-3 h-6 w-6" />
                 GRATIS OFFERTE OPVRAGEN
-              </Link>
-            </Button>
-            <Button
-              asChild
-              variant="outline"
-              size="lg"
-              className="border-2 border-white text-white hover:bg-white hover:text-blue-600 text-xl px-12 py-6 font-bold"
-            >
-              <Link to="/contact">
-                <Phone className="mr-3 h-6 w-6" />
-                DIRECT CONTACT
               </Link>
             </Button>
           </div>
