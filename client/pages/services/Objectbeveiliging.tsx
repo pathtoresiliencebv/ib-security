@@ -420,6 +420,127 @@ export default function Objectbeveiliging() {
           </div>
         </div>
       </section>
+
+      {/* Offerte Formulier Sectie */}
+      <section className="py-32 bg-gradient-to-br from-slate-50 via-blue-50/30 to-gray-100">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16 animate-on-scroll">
+            <Badge className="mb-6 bg-blue-600 text-white px-6 py-3 text-lg font-bold">
+              <FileText className="mr-2 h-5 w-5" />
+              Vrijblijvende Offerte
+            </Badge>
+            <h2 className="font-heading text-3xl md:text-5xl font-black text-gray-900 mb-6">
+              Vraag Direct Een
+              <span className="block text-blue-600">
+                Objectbeveiliging Offerte Op
+              </span>
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Ontvang binnen 24 uur een persoonlijke offerte op maat voor uw
+              objectbeveiliging.
+            </p>
+          </div>
+
+          <Card className="shadow-4xl border-0 animate-on-scroll">
+            <CardContent className="p-8">
+              <form className="space-y-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div>
+                    <Label
+                      htmlFor="quote-name"
+                      className="text-sm font-bold text-gray-700 mb-2 block"
+                    >
+                      Volledige Naam *
+                    </Label>
+                    <Input
+                      id="quote-name"
+                      required
+                      className="border-2 border-gray-200 focus:border-blue-500 text-lg py-3"
+                      placeholder="Uw voor- en achternaam"
+                    />
+                  </div>
+                  <div>
+                    <Label
+                      htmlFor="quote-email"
+                      className="text-sm font-bold text-gray-700 mb-2 block"
+                    >
+                      E-mailadres *
+                    </Label>
+                    <Input
+                      id="quote-email"
+                      type="email"
+                      required
+                      className="border-2 border-gray-200 focus:border-blue-500 text-lg py-3"
+                      placeholder="uw.email@bedrijf.nl"
+                    />
+                  </div>
+                  <div>
+                    <Label
+                      htmlFor="quote-phone"
+                      className="text-sm font-bold text-gray-700 mb-2 block"
+                    >
+                      Telefoonnummer *
+                    </Label>
+                    <Input
+                      id="quote-phone"
+                      type="tel"
+                      required
+                      className="border-2 border-gray-200 focus:border-blue-500 text-lg py-3"
+                      placeholder="085 401 31 92"
+                    />
+                  </div>
+                  <div>
+                    <Label
+                      htmlFor="quote-company"
+                      className="text-sm font-bold text-gray-700 mb-2 block"
+                    >
+                      Bedrijfsnaam *
+                    </Label>
+                    <Input
+                      id="quote-company"
+                      required
+                      className="border-2 border-gray-200 focus:border-blue-500 text-lg py-3"
+                      placeholder="Uw bedrijfsnaam"
+                    />
+                  </div>
+                </div>
+
+                <div>
+                  <Label
+                    htmlFor="quote-message"
+                    className="text-sm font-bold text-gray-700 mb-2 block"
+                  >
+                    Uw Objectbeveiliging Wensen *
+                  </Label>
+                  <Textarea
+                    id="quote-message"
+                    required
+                    className="border-2 border-gray-200 focus:border-blue-500 text-lg min-h-32"
+                    placeholder="Beschrijf uw objectbeveiliging behoeften: locatie, gewenste uren, specifieke eisen..."
+                  />
+                </div>
+
+                <div className="text-center pt-6">
+                  <Button
+                    type="submit"
+                    size="lg"
+                    className="relative bg-gradient-to-r from-blue-600 via-purple-600 to-blue-800 hover:from-blue-700 hover:via-purple-700 hover:to-blue-900 text-white shadow-4xl text-xl px-12 py-6 font-black transform hover:scale-105 transition-all duration-300 overflow-hidden group"
+                  >
+                    <div className="absolute inset-0 bg-gradient-to-r from-purple-600 via-blue-600 to-purple-800 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <div className="relative z-10 flex items-center">
+                      <Calculator className="mr-3 h-6 w-6" />
+                      GRATIS OBJECTBEVEILIGING OFFERTE
+                    </div>
+                  </Button>
+                  <p className="text-sm text-gray-500 mt-4">
+                    🔒 Uw gegevens worden vertrouwelijk behandeld
+                  </p>
+                </div>
+              </form>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
     </Layout>
   );
 }
