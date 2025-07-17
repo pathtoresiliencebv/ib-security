@@ -135,6 +135,44 @@ export default function Layout({ children }: LayoutProps) {
       {/* Main Content */}
       <main>{children}</main>
 
+      {/* Logo Section */}
+      <section className="py-16 bg-gradient-to-br from-slate-50 via-blue-50/30 to-gray-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              Erkende Kwaliteit & Certificeringen
+            </h2>
+            <p className="text-gray-600 max-w-2xl mx-auto">
+              IB Security is gecertificeerd en erkend door de meest
+              vooraanstaande instanties in de beveiligingsbranche
+            </p>
+          </div>
+          <div className="flex justify-center items-center space-x-12 md:space-x-20">
+            <div className="flex-shrink-0">
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets%2F18e64066d3874f39ae16c8e50727ae4d%2Fa9ed7ea673354e5cbce2bba0c7ca862a?format=webp&width=800"
+                alt="Erkend leerbedrijf - Wij leiden vakmensen op"
+                className="h-20 md:h-24 w-auto object-contain filter hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+            <div className="flex-shrink-0">
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets%2F18e64066d3874f39ae16c8e50727ae4d%2F0946bd263c3b477eb4dbe300dc0006b7?format=webp&width=800"
+                alt="Beveiligingscertificering"
+                className="h-20 md:h-24 w-auto object-contain filter hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+            <div className="flex-shrink-0">
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets%2F18e64066d3874f39ae16c8e50727ae4d%2F788e4f5624204391b7602ede98f7fee8?format=webp&width=800"
+                alt="Justitie certificering"
+                className="h-20 md:h-24 w-auto object-contain filter hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Footer */}
       <footer className="bg-gray-900 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -149,6 +187,17 @@ export default function Layout({ children }: LayoutProps) {
                 Professionele beveiligingsdiensten voor Nederland. Wij zorgen
                 voor uw veiligheid met betrouwbare en deskundige beveiliging.
               </p>
+              <div className="space-y-2">
+                <div className="flex items-center space-x-2 text-gray-400">
+                  <MapPin className="h-4 w-4" />
+                  <span>Kroevenlaan 31, 4707 BJ Roosendaal</span>
+                </div>
+                <div className="text-gray-400">
+                  <span className="text-green-400 font-semibold">
+                    Open 24/7
+                  </span>
+                </div>
+              </div>
             </div>
 
             {/* Contact Info */}
@@ -157,15 +206,29 @@ export default function Layout({ children }: LayoutProps) {
               <div className="space-y-2">
                 <div className="flex items-center space-x-2 text-gray-400">
                   <Phone className="h-4 w-4" />
-                  <span>+31 (0)88 123 4567</span>
+                  <a
+                    href="tel:0854013192"
+                    className="hover:text-white transition-colors"
+                  >
+                    085 401 31 92
+                  </a>
                 </div>
                 <div className="flex items-center space-x-2 text-gray-400">
                   <Mail className="h-4 w-4" />
-                  <span>info@ib-security.nl</span>
+                  <a
+                    href="mailto:info@ib-security.nl"
+                    className="hover:text-white transition-colors"
+                  >
+                    info@ib-security.nl
+                  </a>
                 </div>
-                <div className="flex items-center space-x-2 text-gray-400">
-                  <MapPin className="h-4 w-4" />
-                  <span>Nederland</span>
+                <div className="text-gray-400">
+                  <a
+                    href="https://ib-security.nl"
+                    className="hover:text-white transition-colors"
+                  >
+                    ib-security.nl
+                  </a>
                 </div>
               </div>
             </div>
