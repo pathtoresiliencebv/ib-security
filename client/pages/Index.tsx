@@ -838,6 +838,183 @@ export default function Index() {
         </div>
       </section>
 
+      {/* Ultra-Premium Services Section with Professional Photo */}
+      <section className="py-32 bg-gradient-to-br from-slate-50 via-blue-50/30 to-gray-100 relative overflow-hidden">
+        {/* Background Elements */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-20 right-20 w-96 h-96 bg-blue-500 rounded-full blur-3xl animate-pulse-slow"></div>
+          <div className="absolute bottom-20 left-20 w-80 h-80 bg-purple-500 rounded-full blur-3xl animate-pulse-slow"></div>
+        </div>
+
+        <div className="relative max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Section Header */}
+          <div className="text-center mb-20 animate-on-scroll">
+            <Badge className="mb-8 text-xl px-8 py-4 font-black bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-xl">
+              <Shield className="mr-3 h-6 w-6" />
+              PROFESSIONELE BEVEILIGINGSDIENSTEN
+            </Badge>
+            <h2 className="font-display text-5xl md:text-8xl font-black text-gray-900 mb-8 text-shadow-lg">
+              ONZE
+              <span className="block bg-gradient-to-r from-blue-600 via-purple-600 to-blue-800 bg-clip-text text-transparent">
+                SPECIALITEITEN
+              </span>
+            </h2>
+            <p className="text-2xl md:text-3xl text-gray-700 max-w-5xl mx-auto font-medium leading-relaxed">
+              Van objectbeveiliging tot zorgbeveiliging - wij leveren{" "}
+              <span className="font-bold text-blue-600">
+                premium beveiligingsoplossingen
+              </span>
+              die perfect aansluiten bij uw unieke behoeften en eisen.
+            </p>
+          </div>
+
+          {/* Main Content Grid with Photo */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-20">
+            {/* Professional Security Photo */}
+            <div className="relative group animate-on-scroll-left">
+              <div className="absolute -inset-4 bg-gradient-to-r from-blue-600 via-purple-600 to-blue-800 rounded-3xl blur opacity-30 group-hover:opacity-50 transition duration-500"></div>
+              <div className="relative bg-white rounded-3xl p-2 shadow-4xl">
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets%2F18e64066d3874f39ae16c8e50727ae4d%2Fdf08b781620e4762bee954e4ebc22c39?format=webp&width=800"
+                  alt="Professionele IB Security beveiliger in actie"
+                  className="w-full h-[600px] object-cover rounded-2xl shadow-2xl"
+                />
+              </div>
+
+              {/* Floating Badge */}
+              <div className="absolute -bottom-6 -right-6 bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-8 py-4 rounded-2xl font-black text-lg shadow-2xl animate-bounce-subtle">
+                <div className="flex items-center space-x-2">
+                  <Award className="w-6 h-6" />
+                  <span>15+ JAAR ERVARING</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Services Content */}
+            <div className="animate-on-scroll-right">
+              <div className="space-y-6">
+                <div className="bg-white/80 backdrop-blur-lg rounded-2xl p-8 shadow-xl border border-white/20">
+                  <h3 className="font-heading text-3xl font-bold text-gray-900 mb-6">
+                    Waarom kiezen voor IB Security?
+                  </h3>
+                  <div className="space-y-4">
+                    <div className="flex items-center space-x-4">
+                      <div className="w-12 h-12 bg-gradient-to-br from-green-400 to-green-600 rounded-xl flex items-center justify-center">
+                        <CheckCircle className="w-6 h-6 text-white" />
+                      </div>
+                      <div>
+                        <h4 className="font-bold text-lg text-gray-900">
+                          Gecertificeerde Professionals
+                        </h4>
+                        <p className="text-gray-600">
+                          Volledig getraind en gecertificeerd personeel
+                        </p>
+                      </div>
+                    </div>
+                    <div className="flex items-center space-x-4">
+                      <div className="w-12 h-12 bg-gradient-to-br from-blue-400 to-blue-600 rounded-xl flex items-center justify-center">
+                        <Clock className="w-6 h-6 text-white" />
+                      </div>
+                      <div>
+                        <h4 className="font-bold text-lg text-gray-900">
+                          24/7 Beschikbaarheid
+                        </h4>
+                        <p className="text-gray-600">
+                          Altijd bereikbaar voor noodgevallen
+                        </p>
+                      </div>
+                    </div>
+                    <div className="flex items-center space-x-4">
+                      <div className="w-12 h-12 bg-gradient-to-br from-purple-400 to-purple-600 rounded-xl flex items-center justify-center">
+                        <Target className="w-6 h-6 text-white" />
+                      </div>
+                      <div>
+                        <h4 className="font-bold text-lg text-gray-900">
+                          Op Maat Gemaakte Oplossingen
+                        </h4>
+                        <p className="text-gray-600">
+                          Elk plan aangepast aan uw specifieke behoeften
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <Button
+                  asChild
+                  size="lg"
+                  className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white shadow-2xl hover:shadow-glow-intense transition-all duration-300 transform hover:scale-105 text-xl py-6 font-bold"
+                >
+                  <Link to="/contact">
+                    <Phone className="mr-3 h-6 w-6" />
+                    DIRECT CONTACT OPNEMEN
+                  </Link>
+                </Button>
+              </div>
+            </div>
+          </div>
+
+          {/* Enhanced Services Grid */}
+          <div className="animate-on-scroll">
+            <h3 className="font-heading text-4xl font-bold text-center text-gray-900 mb-16">
+              Onze Complete Dienstverlening
+            </h3>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {services.map((service, index) => (
+                <Card
+                  key={index}
+                  className={`group hover:shadow-4xl transition-all duration-500 transform hover:-translate-y-4 hover:rotate-1 border-0 shadow-2xl bg-white/90 backdrop-blur-lg overflow-hidden relative animate-on-scroll-scale`}
+                  style={{ animationDelay: `${index * 0.1}s` }}
+                >
+                  {/* Gradient Border Effect */}
+                  <div className="absolute inset-0 bg-gradient-to-r from-blue-400 via-purple-500 to-blue-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-[1px] rounded-2xl">
+                    <div className="bg-white rounded-2xl h-full w-full"></div>
+                  </div>
+
+                  <Link to={service.href} className="block h-full">
+                    <CardContent className="relative p-6">
+                      <div className="text-center">
+                        <div className="w-16 h-16 bg-gradient-to-br from-blue-100 to-purple-100 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 shadow-lg group-hover:shadow-glow">
+                          <service.icon className="w-8 h-8 text-blue-600 group-hover:text-purple-600 transition-colors" />
+                        </div>
+                        <h4 className="font-bold text-lg text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
+                          {service.title}
+                        </h4>
+                        <p className="text-gray-600 text-sm leading-relaxed group-hover:text-gray-800 transition-colors">
+                          {service.description}
+                        </p>
+                        <div className="mt-4 text-blue-600 font-medium group-hover:text-purple-600 transition-colors flex items-center justify-center">
+                          <span className="mr-2">Meer info</span>
+                          <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                        </div>
+                      </div>
+
+                      {/* Hover Effect Line */}
+                      <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 to-purple-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
+                    </CardContent>
+                  </Link>
+                </Card>
+              ))}
+            </div>
+
+            {/* Premium CTA Button */}
+            <div className="text-center mt-16">
+              <Button
+                asChild
+                size="lg"
+                className="bg-gradient-to-r from-blue-600 via-purple-600 to-blue-800 hover:from-blue-700 hover:via-purple-700 hover:to-blue-900 text-white shadow-4xl hover:shadow-glow-intense transition-all duration-300 transform hover:scale-110 text-2xl px-16 py-8 font-black"
+              >
+                <Link to="/diensten">
+                  <Shield className="mr-4 h-8 w-8" />
+                  BEKIJK ALLE PREMIUM DIENSTEN
+                </Link>
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Enhanced CTA Section */}
       <section className="relative bg-gradient-to-r from-blue-600 via-blue-700 to-blue-800 text-white py-20 overflow-hidden">
         <div className="absolute inset-0 bg-black/10"></div>
