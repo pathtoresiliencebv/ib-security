@@ -24,8 +24,6 @@ import { useScrollAnimationMultiple } from "@/hooks/useScrollAnimation";
 const packages = [
   {
     name: "Basis Alarmopvolging",
-    price: "€150",
-    unit: "per maand",
     features: [
       "24/7 monitoring",
       "Politie contact",
@@ -37,8 +35,6 @@ const packages = [
   },
   {
     name: "Premium Monitoring",
-    price: "€250",
-    unit: "per maand",
     features: [
       "24/7 monitoring",
       "Politie & brandweer",
@@ -51,8 +47,6 @@ const packages = [
   },
   {
     name: "Enterprise Security",
-    price: "Op maat",
-    unit: "maandprijs",
     features: [
       "Dedicated monitoring",
       "Complete emergency response",
