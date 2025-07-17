@@ -247,6 +247,23 @@ export default function MobieleSurveillance() {
             </div>
 
             <div className="animate-on-scroll-right">
+              <div className="relative group mb-8">
+                <div className="absolute -inset-4 bg-gradient-to-r from-green-600 via-blue-600 to-green-800 rounded-3xl blur opacity-30 group-hover:opacity-50 transition duration-500"></div>
+                <div className="relative bg-white rounded-3xl p-2 shadow-4xl">
+                  <img
+                    src="https://cdn.builder.io/api/v1/image/assets%2F18e64066d3874f39ae16c8e50727ae4d%2F04dab4720ad84c7e81af8f15a7912456?format=webp&width=800"
+                    alt="IB Security mobiele surveillance team op nachtelijke patrol"
+                    className="w-full h-[400px] object-cover rounded-2xl shadow-2xl"
+                  />
+                </div>
+                <div className="absolute -bottom-6 -right-6 bg-gradient-to-r from-green-600 to-blue-600 text-white px-6 py-3 rounded-2xl font-bold text-lg shadow-2xl animate-bounce-subtle">
+                  <div className="flex items-center space-x-2">
+                    <Car className="w-5 h-5" />
+                    <span>MOBIELE UNITS</span>
+                  </div>
+                </div>
+              </div>
+
               <Card className="bg-white/10 backdrop-blur-lg border-white/20 text-white shadow-2xl">
                 <CardContent className="p-8">
                   <h3 className="text-2xl font-bold mb-6">
