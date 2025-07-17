@@ -39,49 +39,41 @@ const serviceOptions = [
     id: "object",
     name: "Objectbeveiliging",
     description: "24/7 beveiliging van uw bedrijfspand",
-    basePrice: "vanaf €25/uur",
   },
   {
     id: "receptie",
     name: "Receptie beveiliging",
     description: "Professionele receptie met beveiligingstaak",
-    basePrice: "vanaf €22/uur",
   },
   {
     id: "evenement",
     name: "Evenementenbeveiliging",
     description: "Veilige en succesvolle evenementen",
-    basePrice: "vanaf €30/uur",
   },
   {
     id: "alarm",
     name: "Alarmopvolging",
     description: "24/7 monitoring en alarmopvolging",
-    basePrice: "vanaf €150/maand",
   },
   {
     id: "mobiel",
     name: "Mobiele Surveillance",
     description: "Flexibele rondes en controles",
-    basePrice: "vanaf €45/ronde",
   },
   {
     id: "zorg",
     name: "Zorgbeveiliging",
     description: "Gespecialiseerde zorgbeveiliging",
-    basePrice: "vanaf €28/uur",
   },
   {
     id: "ggz",
     name: "GGZ Beveiliging",
     description: "Empathische GGZ-beveiliging",
-    basePrice: "vanaf €32/uur",
   },
   {
     id: "uitzend",
     name: "Uitzendbureau beveiliging",
     description: "Tijdelijk beveiligingspersoneel",
-    basePrice: "vanaf €24/uur",
   },
 ];
 
@@ -351,12 +343,6 @@ export default function OfferteOpvragen() {
                               <p className="text-gray-600 text-sm mb-2">
                                 {service.description}
                               </p>
-                              <Badge
-                                variant="outline"
-                                className="text-green-600 border-green-600"
-                              >
-                                {service.basePrice}
-                              </Badge>
                             </div>
                           </div>
                         </CardContent>
@@ -472,44 +458,7 @@ export default function OfferteOpvragen() {
                     <Euro className="mr-3 h-6 w-6 text-blue-600" />
                     Budget & Specifieke Wensen
                   </h3>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-                    <div>
-                      <Label
-                        htmlFor="budget"
-                        className="text-sm font-bold text-gray-700 mb-2 block"
-                      >
-                        Indicatief Budget
-                      </Label>
-                      <Select
-                        onValueChange={(value) =>
-                          handleInputChange("budget", value)
-                        }
-                      >
-                        <SelectTrigger className="border-2 border-gray-200 focus:border-blue-500 text-lg py-4">
-                          <SelectValue placeholder="Budget indicatie" />
-                        </SelectTrigger>
-                        <SelectContent>
-                          <SelectItem value="1000">
-                            €500 - €1.000 per maand
-                          </SelectItem>
-                          <SelectItem value="2500">
-                            €1.000 - €2.500 per maand
-                          </SelectItem>
-                          <SelectItem value="5000">
-                            €2.500 - €5.000 per maand
-                          </SelectItem>
-                          <SelectItem value="10000">
-                            €5.000 - €10.000 per maand
-                          </SelectItem>
-                          <SelectItem value="meer">
-                            Meer dan €10.000 per maand
-                          </SelectItem>
-                          <SelectItem value="bespreek">
-                            Wil ik bespreken
-                          </SelectItem>
-                        </SelectContent>
-                      </Select>
-                    </div>
+                  <div className="mb-6">
                     <div>
                       <Label
                         htmlFor="urgency"
