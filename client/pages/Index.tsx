@@ -1046,7 +1046,7 @@ export default function Index() {
               tillen.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-6 justify-center mb-8">
+            <div className="flex justify-center mb-8">
               <Button
                 asChild
                 size="lg"
@@ -1056,17 +1056,6 @@ export default function Index() {
                   <Shield className="mr-2 h-5 w-5" />
                   Gratis Offerte Opvragen
                 </Link>
-              </Button>
-              <Button
-                asChild
-                variant="outline"
-                size="lg"
-                className="border-2 border-white text-white hover:bg-white hover:text-blue-600 backdrop-blur-sm bg-white/10 text-lg px-8 py-4"
-              >
-                <a href="tel:+31881234567">
-                  <Phone className="mr-2 h-5 w-5" />
-                  Direct bellen: 088 123 4567
-                </a>
               </Button>
             </div>
 
