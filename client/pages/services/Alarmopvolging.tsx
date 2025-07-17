@@ -114,11 +114,14 @@ export default function Alarmopvolging() {
                 <Button
                   asChild
                   size="lg"
-                  className="bg-gradient-to-r from-yellow-600 to-orange-600 hover:from-yellow-700 hover:to-orange-700 text-white shadow-xl text-lg px-8 py-4 font-bold transform hover:scale-105 transition-all duration-300"
+                  className="relative bg-gradient-to-r from-yellow-600 to-orange-600 hover:from-yellow-700 hover:to-orange-700 text-white shadow-xl text-lg px-8 py-4 font-bold transform hover:scale-105 transition-all duration-300 overflow-hidden group"
                 >
                   <Link to="/offerte-opvragen">
-                    <Target className="mr-2 h-5 w-5" />
-                    Monitoring Offerte
+                    <div className="absolute inset-0 bg-gradient-to-r from-orange-600 via-yellow-600 to-orange-800 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <div className="relative z-10 flex items-center">
+                      <Target className="mr-2 h-5 w-5" />
+                      Monitoring Offerte
+                    </div>
                   </Link>
                 </Button>
                 <Button
