@@ -320,34 +320,39 @@ export default function OfferteOpvragen() {
                   </h3>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     {serviceOptions.map((service) => (
-                      <Card
+                      <div
                         key={service.id}
-                        className={`transition-all duration-300 border-2 ${
-                          formData.services.includes(service.id)
-                            ? "border-blue-500 bg-blue-50 shadow-lg"
-                            : "border-gray-200 hover:border-blue-300 hover:shadow-md"
-                        }`}
+                        className="cursor-pointer"
+                        onClick={() => handleServiceToggle(service.id)}
                       >
-                        <CardContent className="p-6">
-                          <div className="flex items-start space-x-4">
-                            <Checkbox
-                              checked={formData.services.includes(service.id)}
-                              onCheckedChange={() =>
-                                handleServiceToggle(service.id)
-                              }
-                              className="mt-1"
-                            />
-                            <div className="flex-1">
-                              <h4 className="font-bold text-lg text-gray-900 mb-1">
-                                {service.name}
-                              </h4>
-                              <p className="text-gray-600 text-sm mb-2">
-                                {service.description}
-                              </p>
+                        <Card
+                          className={`transition-all duration-300 border-2 ${
+                            formData.services.includes(service.id)
+                              ? "border-blue-500 bg-blue-50 shadow-lg"
+                              : "border-gray-200 hover:border-blue-300 hover:shadow-md"
+                          }`}
+                        >
+                          <CardContent className="p-6">
+                            <div className="flex items-start space-x-4">
+                              <Checkbox
+                                checked={formData.services.includes(service.id)}
+                                onCheckedChange={() =>
+                                  handleServiceToggle(service.id)
+                                }
+                                className="mt-1 pointer-events-none"
+                              />
+                              <div className="flex-1">
+                                <h4 className="font-bold text-lg text-gray-900 mb-1">
+                                  {service.name}
+                                </h4>
+                                <p className="text-gray-600 text-sm mb-2">
+                                  {service.description}
+                                </p>
+                              </div>
                             </div>
-                          </div>
-                        </CardContent>
-                      </Card>
+                          </CardContent>
+                        </Card>
+                      </div>
                     ))}
                   </div>
                 </div>
