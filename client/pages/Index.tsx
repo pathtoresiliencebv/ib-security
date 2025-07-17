@@ -556,7 +556,7 @@ export default function Index() {
               <Shield className="mr-3 h-6 w-6" />
               PROFESSIONELE BEVEILIGINGSDIENSTEN
             </Badge>
-            <h2 className="font-display text-5xl md:text-8xl font-black text-gray-900 mb-8 text-shadow-lg">
+            <h2 className="font-display text-3xl md:text-5xl font-black text-gray-900 mb-8 text-shadow-lg">
               ONZE
               <span className="block bg-gradient-to-r from-blue-600 via-purple-600 to-blue-800 bg-clip-text text-transparent">
                 SPECIALITEITEN
@@ -646,11 +646,14 @@ export default function Index() {
                 <Button
                   asChild
                   size="lg"
-                  className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white shadow-2xl hover:shadow-glow-intense transition-all duration-300 transform hover:scale-105 text-xl py-6 font-bold"
+                  className="relative w-full bg-gradient-to-r from-blue-600 via-purple-600 to-blue-800 hover:from-blue-700 hover:via-purple-700 hover:to-blue-900 text-white shadow-2xl hover:shadow-glow-intense transition-all duration-300 transform hover:scale-105 text-xl py-6 font-bold overflow-hidden group"
                 >
                   <Link to="/contact">
-                    <Phone className="mr-3 h-6 w-6" />
-                    DIRECT CONTACT OPNEMEN
+                    <div className="absolute inset-0 bg-gradient-to-r from-purple-600 via-blue-600 to-purple-800 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <div className="relative z-10 flex items-center justify-center">
+                      <Phone className="mr-3 h-6 w-6" />
+                      DIRECT CONTACT OPNEMEN
+                    </div>
                   </Link>
                 </Button>
               </div>
@@ -706,11 +709,14 @@ export default function Index() {
               <Button
                 asChild
                 size="lg"
-                className="bg-gradient-to-r from-blue-600 via-purple-600 to-blue-800 hover:from-blue-700 hover:via-purple-700 hover:to-blue-900 text-white shadow-4xl hover:shadow-glow-intense transition-all duration-300 transform hover:scale-110 text-2xl px-16 py-8 font-black"
+                className="relative bg-gradient-to-r from-blue-600 via-purple-600 to-blue-800 hover:from-blue-700 hover:via-purple-700 hover:to-blue-900 text-white shadow-4xl hover:shadow-glow-intense transition-all duration-300 transform hover:scale-105 text-xl px-16 py-6 font-black overflow-hidden group"
               >
                 <Link to="/diensten">
-                  <Shield className="mr-4 h-8 w-8" />
-                  BEKIJK ALLE PREMIUM DIENSTEN
+                  <div className="absolute inset-0 bg-gradient-to-r from-purple-600 via-blue-600 to-purple-800 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <div className="relative z-10 flex items-center">
+                    <Shield className="mr-4 h-6 w-6" />
+                    BEKIJK ALLE PREMIUM DIENSTEN
+                  </div>
                 </Link>
               </Button>
             </div>
@@ -859,7 +865,7 @@ export default function Index() {
               <Shield className="mr-3 h-6 w-6" />
               PROFESSIONELE BEVEILIGINGSDIENSTEN
             </Badge>
-            <h2 className="font-display text-5xl md:text-8xl font-black text-gray-900 mb-8 text-shadow-lg">
+            <h2 className="font-display text-3xl md:text-5xl font-black text-gray-900 mb-8 text-shadow-lg">
               ONZE
               <span className="block bg-gradient-to-r from-blue-600 via-purple-600 to-blue-800 bg-clip-text text-transparent">
                 SPECIALITEITEN
@@ -949,11 +955,14 @@ export default function Index() {
                 <Button
                   asChild
                   size="lg"
-                  className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white shadow-2xl hover:shadow-glow-intense transition-all duration-300 transform hover:scale-105 text-xl py-6 font-bold"
+                  className="relative w-full bg-gradient-to-r from-blue-600 via-purple-600 to-blue-800 hover:from-blue-700 hover:via-purple-700 hover:to-blue-900 text-white shadow-2xl hover:shadow-glow-intense transition-all duration-300 transform hover:scale-105 text-xl py-6 font-bold overflow-hidden group"
                 >
                   <Link to="/contact">
-                    <Phone className="mr-3 h-6 w-6" />
-                    DIRECT CONTACT OPNEMEN
+                    <div className="absolute inset-0 bg-gradient-to-r from-purple-600 via-blue-600 to-purple-800 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <div className="relative z-10 flex items-center justify-center">
+                      <Phone className="mr-3 h-6 w-6" />
+                      DIRECT CONTACT OPNEMEN
+                    </div>
                   </Link>
                 </Button>
               </div>
@@ -1009,11 +1018,14 @@ export default function Index() {
               <Button
                 asChild
                 size="lg"
-                className="bg-gradient-to-r from-blue-600 via-purple-600 to-blue-800 hover:from-blue-700 hover:via-purple-700 hover:to-blue-900 text-white shadow-4xl hover:shadow-glow-intense transition-all duration-300 transform hover:scale-110 text-2xl px-16 py-8 font-black"
+                className="relative bg-gradient-to-r from-blue-600 via-purple-600 to-blue-800 hover:from-blue-700 hover:via-purple-700 hover:to-blue-900 text-white shadow-4xl hover:shadow-glow-intense transition-all duration-300 transform hover:scale-105 text-xl px-16 py-6 font-black overflow-hidden group"
               >
                 <Link to="/diensten">
-                  <Shield className="mr-4 h-8 w-8" />
-                  BEKIJK ALLE PREMIUM DIENSTEN
+                  <div className="absolute inset-0 bg-gradient-to-r from-purple-600 via-blue-600 to-purple-800 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <div className="relative z-10 flex items-center">
+                    <Shield className="mr-4 h-6 w-6" />
+                    BEKIJK ALLE PREMIUM DIENSTEN
+                  </div>
                 </Link>
               </Button>
             </div>
